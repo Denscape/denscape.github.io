@@ -7,48 +7,114 @@
     <title>Bootstrap demo</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <style>
+    :root{ --accent-rgb: 30,144,255; }
+
+        .hero-section {
+            background-image: url('assets/heroSectionBackGround.jpg');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            position: relative;
+        }
+
+        .hero-section::before {
+            content: "";
+            position: absolute;
+            inset: 0;
+            background: rgba(0, 0, 0, 0.35);
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 2;
+            color: #fff;
+            text-align: center;
+        }
+
+        .hero-section .container {
+            padding: 4rem 1rem;
+        }
+
+    /* blue shadow */
+        .card {
+            box-shadow: 0 10px 30px rgba(var(--accent-rgb), 0.06);
+            transition: box-shadow 0.25s ease, transform 0.15s ease;
+        }
+
+        .card:hover {
+            box-shadow: 0 18px 50px rgba(var(--accent-rgb), 0.14);
+            transform: translateY(-4px);
+        }
+
+        .card .card-body img {
+            box-shadow: 0 8px 24px rgba(var(--accent-rgb), 0.12);
+        }
+
+        @media (max-width: 576px) {
+            .hero-section .container { padding: 2rem 1rem; }
+            .hero-content .display-4 { font-size: 1.75rem; }
+        }
+    </style>
 </head>
 
 <body>
-    <div class="container">
+    <div class="container-fluid">
         <nav>
             <ul class="nav nav-tabs justify-content-center mt-4">
                 <li class="nav-item">
-                    <a href="#" class="nav-link active">Home</a>
+                    <a href="index.html" class="nav-link active">Home</a>
                 </li>
                 <li class="nav-item">
-                    <a href="#" class="nav-link">Portfolio</a>
-                </li>
-                <li class="nav-item">
-                    <a href="#" class="nav-link">About me</a>
+                    <a href="activities.html" class="nav-link">Activities</a>
                 </li>
                 <li class="nav-item">
                     <a href="#" class="nav-link">Contact</a>
                 </li>
+                <li class="nav-item">
+                    <a href="#" class="nav-link">About me</a>
+                </li>
             </ul>
         </nav>
     </div>
-    <!-- Hero Section -->
-    <section class="py-5 bg-light text-center">
-        <div class="container">
-            <img src="assets\Denmar Redondo.jpg" alt="Denmar Redondo" class="rounded-circle mb-3" width="140" height="140">
+    <section class="hero-section text-center">
+        <div class="container hero-content">
+            <img src="assets/Denmar Redondo.jpg" alt="Denmar Redondo" class="rounded-circle mb-3" width="140"
+                height="140">
             <h1 class="display-4">Denmar Redondo</h1>
             <p class="lead mb-4">Aspiring IT Professional | Networking Enthusiast | Web Developer</p>
         </div>
     </section>
-
-    <div class="container">
-        <div class="row">
-            <div class="col text-start my-4">
-                <div class="card">
-                    <div class="card-body">
+    <div class="container py-5 px-5 mt-5 rounded-5 shadow-lg">
+        <div class="row align-items-center">
+            <div class="col-auto">
+                <img src="assets/whoAmI.jpg" alt="whoAmI" width="140" height="140">
+            </div>
+            <div class="col">
+                <h6 class="div-text text-start">Who am I</h6>
+                <p class="div-text text-start">
+                    My name is Redondo, Denmar C., 20 years of age, and I am currently enrolled at Polytechnic
+                    University of the Philippines - Sto. Tomas Campus. I am a student passionate about technology and
+                    learning.
+                    I enjoy solving problems and continuously expanding my skills in software development.
+                    I value honesty and determination, which guide me through challenges.
+                    I am excited to keep growing and contributing to meaningful projects.
+                </p>
+            </div>
+        </div>
+    </div>
+    <div class="container-fluid py-5 my-5">
+        <div class="row align-items-stretch">
+            <div class="col-12 col-md-4 d-flex mb-4">
+                <div class="card h-100 w-100">
+                    <div class="card-body shadow-lg">
                         <h4 class="mb-3">Interest</h4>
                         <h6 class="fw-normal">I'm passionate about exploring networking technologies and discovering how
                             computer systems
                             connect and share information. My goal is to master network setup, cybersecurity principles,
                             and emerging technologies to create robust and dependable systems.
                         </h6>
-                        <ul class="list-group list-group-flush">
+                        <ul class="list-group list-group-flush mt-auto">
                             <li class="list-group-item">Networking</li>
                             <li class="list-group-item">Programming</li>
                             <li class="list-group-item">Web Development</li>
@@ -56,15 +122,14 @@
                         </ul>
                     </div>
                 </div>
-
             </div>
-            <div class="col text-start my-4">
-                <div class="card">
-                    <div class="card-body">
+            <div class="col-12 col-md-4 d-flex mb-4">
+                <div class="card h-100 w-100">
+                    <div class="card-body shadow-lg">
                         <h4 class="mb-2">Socials</h4>
                         <h6 class="fw-normal">Easily connect with me or explore my work through the links below:
                         </h6>
-                        <ul class="list-group list-group-flush">
+                        <ul class="list-group list-group-flush mt-auto">
                             <li class="list-group-item"><a href="#" class="link-underline-dark">Facebook</a></li>
                             <li class="list-group-item"><a href="#" class="link-underline-dark">Instagram</a></li>
                             <li class="list-group-item"><a href="#" class="link-underline-dark">LinkedIn</a></li>
@@ -76,10 +141,10 @@
                 </div>
             </div>
 
-            <div class="col text-start my-4">
-                <div class="card">
-                    <div class="card-body">
-                        <h4 class="mb-3">Skills</h4>
+            <div class="col-12 col-md-4 d-flex mb-4">
+                <div class="card h-100 w-100">
+                    <div class="card-body shadow-lg">
+                        <h4 class="mb-3">Recent Achievements</h4>
                         <h6 class="fw-normal">I recently completed a 22-hour Networking Basics course, which gave me
                             foundational skills
                             in computer networks. The course covered key topics like how data moves across networks, how
@@ -87,27 +152,12 @@
                             lot, I know I still need to study more to deepen my understanding and stay updated with new
                             networking technologies.
                         </h6>
-                        <h6 class="m-2 mt-3">My current networking skills:</h6>
-                        <ul class="list-group list-group-flush">
-                            <li class="list-group-item">Explain important concepts in network communication, types,
-                                components, and connections
-                            </li>
-                            <li class="list-group-item">Explain the importance of standards and protocols in network
-                                communications
-                            </li>
-                            <li class="list-group-item">Explain how communication occurs on Ethernet network
-                            </li>
-                            <li class="list-group-item">Explain the features of an IP address and how IPv4 and IPv6
-                                addresses are used in network communication
-                            </li>
-                            <li class="list-group-item">Explain features of IPv6 addressing
-                            </li>
-                            <li class="list-group-item">Use various tools to test and troubleshoot network connectivity
-                            </li>
-                            <li class="list-group-item">Configure an integrated wireless router and wireless client to
-                                connect securely to the internet
-                            </li>
-                        </ul>
+                        <img src="assets/certificationsNetworking.jpg" alt="Networking certification"
+                            class="img-fluid mt-3 ms-5" style="max-width:115px; height:auto;">
+                        <img src="assets/networking-basics.png" alt="Networking basics" class="img-fluid mt-3 ms-5"
+                            style="max-width:115px; height:auto;">
+                        <img src="assets/ciscoCertification.jpg" alt="Cisco certification" class="img-fluid mt-3 ms-5"
+                            style="max-width:115px; height:auto;">
                     </div>
                 </div>
             </div>
