@@ -271,16 +271,12 @@
         integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
         crossorigin="anonymous"></script>
     <script>
-        // Ensure ScrollSpy is initialized with a sensible offset and refresh on load
         window.addEventListener('DOMContentLoaded', function () {
             if (window.bootstrap && document.body) {
-                // destroy any existing ScrollSpy instance if present
                 try { document.body._scrollspy && document.body._scrollspy.dispose(); } catch (e) {}
                 var spy = new bootstrap.ScrollSpy(document.body, { target: '#navbar', offset: 90 });
-                // Keep a reference in case we need to dispose later
                 document.body._scrollspy = spy;
 
-                // Fix: when clicking nav links, briefly delay and refresh ScrollSpy (helps with instant hash jumps)
                 document.querySelectorAll('#navbar .nav-link').forEach(function (el) {
                     el.addEventListener('click', function () {
                         setTimeout(function () { spy.refresh(); }, 120);
