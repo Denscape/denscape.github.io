@@ -1,6 +1,9 @@
 :root {
     --accent-rgb: 30, 144, 255;
 }
+html {
+    scroll-behavior: smooth;
+}
 
 body {
     font-family: 'Merriweather', Georgia, 'Times New Roman', serif;
