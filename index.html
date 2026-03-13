@@ -22,28 +22,39 @@
                 <div class="col-12">
                     <div
                         class="navbar-glass rounded-pill my-3 p-2 bg-white bg-opacity-75 border shadow-sm backdrop-blur">
-                        <nav class="nav nav-fill" id="navbar" role="navigation" aria-label="Primary">
-                            <a class="nav-link mx-1 fw-semibold fs-6 py-2 px-3 rounded-pill nav-transition text-muted"
+                        <div class="navbar navbar-expand-md p-0">
+                            <button class="navbar-toggler professional-toggler ms-auto d-md-none" type="button"
+                                data-bs-toggle="collapse" data-bs-target="#primaryNavbar" aria-controls="primaryNavbar"
+                                aria-expanded="false" aria-label="Toggle navigation">
+                                <i class="fas fa-bars"></i>
+                            </button>
+
+                            <div class="collapse navbar-collapse" id="primaryNavbar">
+                                <nav class="nav nav-fill flex-column flex-md-row w-100" id="navbar" role="navigation"
+                                    aria-label="Primary">
+                                    <a class="nav-link mx-md-1 fw-semibold fs-6 py-2 px-3 rounded-pill nav-transition text-muted"
                                 href="#home">
                                 <i class="fas fa-user me-2" style="opacity:.95"></i>
                                 Home
                             </a>
-                            <a class="nav-link mx-1 fw-semibold fs-6 py-2 px-3 rounded-pill nav-transition text-muted"
+                                    <a class="nav-link mx-md-1 fw-semibold fs-6 py-2 px-3 rounded-pill nav-transition text-muted"
                                 href="#activities">
                                 <i class="fas fa-cogs me-2" style="opacity:.95"></i>
                                 Activities/Projects
                             </a>
-                            <a class="nav-link mx-1 fw-semibold fs-6 py-2 px-3 rounded-pill nav-transition text-muted"
+                                    <a class="nav-link mx-md-1 fw-semibold fs-6 py-2 px-3 rounded-pill nav-transition text-muted"
                                 href="#contact">
                                 <i class="fas fa-folder me-2" style="opacity:.95"></i>
                                 Contact
                             </a>
-                            <a class="nav-link mx-1 fw-semibold fs-6 py-2 px-3 rounded-pill nav-transition text-muted"
+                                    <a class="nav-link mx-md-1 fw-semibold fs-6 py-2 px-3 rounded-pill nav-transition text-muted"
                                 href="#">
                                 <i class="fas fa-envelope me-2" style="opacity:.95"></i>
                                 CV
                             </a>
-                        </nav>
+                                </nav>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -342,6 +353,13 @@
                 document.querySelectorAll('#navbar .nav-link').forEach(function (el) {
                     el.addEventListener('click', function () {
                         setTimeout(function () { spy.refresh(); }, 120);
+
+                        if (window.innerWidth < 768) {
+                            var menu = document.getElementById('primaryNavbar');
+                            if (menu) {
+                                bootstrap.Collapse.getOrCreateInstance(menu, { toggle: false }).hide();
+                            }
+                        }
                     });
                 });
             }
