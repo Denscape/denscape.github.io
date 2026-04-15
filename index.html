@@ -6,18 +6,24 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Denscape's Portfolio</title>
     <meta name="description"
-        content="Denmar Redondo portfolio featuring networking, cybersecurity, and web development projects.">
+        content="Creative portfolio of Denmar Redondo featuring networking, cybersecurity, and web development projects.">
     <link rel="icon" type="image/svg+xml" href="assets/densicon.svg">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
     <link
-        href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@400;700&family=Merriweather:wght@300;400;700&display=swap"
+        href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700&family=Manrope:wght@400;500;700;800&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="index.css">
 </head>
 
 <body>
+    <div class="ambient-layer" aria-hidden="true">
+        <span class="orb orb-1"></span>
+        <span class="orb orb-2"></span>
+        <span class="orb orb-3"></span>
+    </div>
+
     <header class="site-header sticky-top">
         <div class="container">
             <nav class="navbar navbar-expand-lg pro-navbar" aria-label="Primary navigation">
@@ -41,213 +47,197 @@
     </header>
 
     <main>
-        <section id="home" class="hero-section">
+        <section id="home" class="hero-section reveal">
             <div class="container">
                 <div class="row align-items-center gy-4">
                     <div class="col-lg-7 text-center text-lg-start">
                         <span class="hero-badge"><i class="fa-solid fa-location-dot"></i>Tanauan City, Batangas</span>
-                        <h1 class="hero-title" style="font-size:clamp(2rem,4vw,3.2rem); margin-bottom:.9rem;">Denmar Redondo</h1>
-                        <p class="hero-subtitle mx-auto mx-lg-0" style="max-width:680px; font-size:1.08rem; margin-bottom:0;">Aspiring Networking Professional focused on network infrastructure,
+                        <h1 class="hero-title">Learn, learn, and keep learning until you earn.</h1>
+                        <p class="hero-subtitle">I am Denmar Redondo, an aspiring IT professional focused on networking,
                             cybersecurity, and practical web development.</p>
-                        <div class="d-flex flex-wrap gap-2 mt-4 justify-content-center justify-content-lg-start">
-                            <a href="#work" class="btn btn-outline-pro">View My Work</a>
-                            <a href="#contact" class="btn btn-outline-pro">Let's Connect</a>
+
+                        <div class="hero-cta d-flex flex-wrap gap-2 mt-4 justify-content-center justify-content-lg-start">
+                            <a href="#work" class="btn btn-main">Explore Work</a>
+                            <a href="#contact" class="btn btn-ghost">Let's Connect</a>
                             <a href="assets/curriculumVitae.jpg" target="_blank" rel="noopener noreferrer"
-                                class="btn btn-outline-pro" aria-label="Open CV">View CV</a>
+                                class="btn btn-ghost" aria-label="Open CV">View CV</a>
                         </div>
+
                         <div class="hero-tags mt-4 justify-content-center justify-content-lg-start">
                             <span>Network Fundamentals</span>
                             <span>Security Mindset</span>
                             <span>Web Development</span>
                         </div>
                     </div>
-                    <div class="col-lg-5 text-center">
-                        <div class="profile-frame">
-                            <img src="assets/denscapePic.jpg" alt="Denmar Redondo" class="profile-photo" width="220"
-                                height="220">
-                        </div>
-                    </div>
-                </div>
-            </div>  
-        </section>
 
-        <section class="stats-strip" style="padding:0 0 2rem;">
-            <div class="container">
-                <div class="text-center mb-3">
-                    <p class="mb-1 fw-semibold">Quick Profile Snapshot</p>
-                    <p class="mb-0 small">A fast summary of my learning progress and focus areas.</p>
+                    <div class="col-lg-5">
+                        <article class="profile-panel mx-auto">
+                            <img src="assets/denscapePic.jpg" alt="Denmar Redondo" class="profile-photo" width="260"
+                                height="260">
+                            <div class="profile-glow" aria-hidden="true"></div>
+                            <div class="status-pill"><i class="fa-solid fa-bolt"></i>Currently focused on learning</div>
+                        </article>
+                    </div>
                 </div>
-                <div class="row g-3">
-                    <div class="col-6 col-lg-3">
-                        <article class="stat-card">
-                            <p class="stat-number">22+</p>
-                            <p class="stat-label mb-0">Networking Training Hours</p>
-                        </article>
-                    </div>
-                    <div class="col-6 col-lg-3">
-                        <article class="stat-card">
-                            <p class="stat-number">9+</p>
-                            <p class="stat-label mb-0">Portfolio Projects Completed</p>
-                        </article>
-                    </div>
-                    <div class="col-6 col-lg-3">
-                        <article class="stat-card">
-                            <p class="stat-number">3</p>
-                            <p class="stat-label mb-0">Career Interests: Networking, Quality Assurance, Cybersecurity</p>
-                        </article>
-                    </div>
-                    <div class="col-6 col-lg-3">
-                        <article class="stat-card">
-                            <p class="stat-number">100%</p>
-                            <p class="stat-label mb-0">Learning Commitment</p>
-                        </article>
-                    </div>
+
+                <div class="snapshot-grid reveal stagger">
+                    <article class="snapshot-card">
+                        <p class="stat-number">22+</p>
+                        <p class="stat-label">Networking Training Hours</p>
+                    </article>
+                    <article class="snapshot-card">
+                        <p class="stat-number">9+</p>
+                        <p class="stat-label">Portfolio Projects Completed</p>
+                    </article>
+                    <article class="snapshot-card">
+                        <p class="stat-number">3</p>
+                        <p class="stat-label">Core Tracks: Networking, QA, Cybersecurity</p>
+                    </article>
+                    <article class="snapshot-card">
+                        <p class="stat-number">100%</p>
+                        <p class="stat-label">Learning Commitment</p>
+                    </article>
                 </div>
             </div>
         </section>
 
-        <section id="about" class="section-space">
+        <section id="about" class="section-space reveal">
             <div class="container">
                 <div class="section-heading text-center">
                     <span class="section-kicker">Profile</span>
                     <h2>About Me</h2>
                     <p>Technology student at Polytechnic University of the Philippines - Sto. Tomas Campus.</p>
                 </div>
-                <div class="row gy-4">
+
+                <div class="row g-4 align-items-stretch">
                     <div class="col-lg-7">
-                        <div class="pro-card h-100">
-                            <h3 class="h4 mb-3">Who I Am</h3>
-                            <p class="mb-3">My name is Redondo, Denmar C., and I am passionate about learning and
-                                solving real-world technology problems. I continuously improve my skills in software and
-                                networking through projects and hands-on practice.</p>
-                            <p class="mb-0">I value honesty, discipline, and determination. These help me stay focused
-                                while building dependable systems and growing as an IT professional.</p>
-                        </div>
+                        <article class="pro-card h-100">
+                            <h3>Who I Am</h3>
+                            <p>My name is Redondo, Denmar C., and I am passionate about solving real-world technology
+                                problems. I continuously sharpen my skills through hands-on software and networking projects.</p>
+                            <p>I value honesty, discipline, and determination. These principles help me build dependable
+                                systems while growing into a stronger IT professional.</p>
+                        </article>
                     </div>
                     <div class="col-lg-5">
-                        <div class="pro-card h-100">
-                            <h3 class="h4 mb-3">Core Interests</h3>
+                        <article class="pro-card h-100">
+                            <h3>Core Interests</h3>
                             <ul class="icon-list">
                                 <li><i class="fa-solid fa-network-wired"></i>Networking</li>
-                                <li><i class="fa-solid fa-shield-alt"></i>Cybersecurity</li>
+                                <li><i class="fa-solid fa-shield-halved"></i>Cybersecurity</li>
                                 <li><i class="fa-solid fa-code"></i>Programming</li>
                                 <li><i class="fa-solid fa-laptop-code"></i>Web Development</li>
                             </ul>
-                        </div>
+                        </article>
                     </div>
                 </div>
-            </div>
-        </section>
 
-        <section class="section-space section-soft">
-            <div class="container">
-                <div class="row g-4 align-items-stretch">
+                <div class="row g-4 mt-1 reveal stagger">
                     <div class="col-md-6 col-xl-4">
-                        <div class="pro-card h-100 text-center">
-                            <h3 class="h5">Networking Foundations</h3>
-                            <p class="mb-4">Completed a 22-hour Networking Basics program with practical knowledge in IP
-                                setup, routing concepts, and troubleshooting.</p>
-                            <div class="d-flex justify-content-center gap-2 flex-wrap">
-                                <img src="assets/certificationsNetworking.jpg" alt="Networking certificate"
-                                    class="cert-image">
+                        <article class="pro-card h-100 text-center">
+                            <h3>Networking Foundations</h3>
+                            <p>Completed a 22-hour Networking Basics program covering IP setup, routing concepts, and
+                                troubleshooting workflows.</p>
+                            <div class="cert-row">
+                                <img src="assets/certificationsNetworking.jpg" alt="Networking certificate" class="cert-image">
                                 <img src="assets/networking-basics.png" alt="Networking basics badge" class="cert-image">
                                 <img src="assets/ciscoCertification.jpg" alt="Cisco certification" class="cert-image">
                             </div>
-                        </div>
+                        </article>
                     </div>
                     <div class="col-md-6 col-xl-4">
-                        <div class="pro-card h-100 d-flex flex-column">
-                            <h3 class="h5">Current Focus</h3>
-                            <p>Building full understanding of secure systems through continuous practice,
-                                collaboration, and project-based learning.</p>
-                            <ul class="focus-list mb-4">
+                        <article class="pro-card h-100">
+                            <h3>Current Focus</h3>
+                            <p>Building secure systems through practice, collaboration, and project-based learning.</p>
+                            <ul class="focus-list">
                                 <li><i class="fa-solid fa-check"></i>Hands-on networking practice</li>
                                 <li><i class="fa-solid fa-check"></i>Secure coding habits</li>
-                                <li><i class="fa-solid fa-check"></i>Building real web projects</li>
+                                <li><i class="fa-solid fa-check"></i>Real web project delivery</li>
                             </ul>
-                        </div>
+                        </article>
                     </div>
                     <div class="col-md-12 col-xl-4">
-                        <div class="pro-card h-100 d-flex flex-column">
-                            <h3 class="h5">Career Goal</h3>
-                            <p>Grow into a well-rounded IT professional who can design, secure, and maintain
-                                robust digital solutions.</p>
-                            <ul class="focus-list mb-4">
+                        <article class="pro-card h-100">
+                            <h3>Career Goal</h3>
+                            <p>Grow into a well-rounded IT professional who can design, secure, and maintain robust
+                                digital solutions.</p>
+                            <ul class="focus-list">
                                 <li><i class="fa-solid fa-arrow-right"></i>Networking and infrastructure role</li>
                                 <li><i class="fa-solid fa-arrow-right"></i>Cybersecurity specialization</li>
                                 <li><i class="fa-solid fa-arrow-right"></i>Long-term networking career path</li>
                             </ul>
-                        </div>
+                        </article>
                     </div>
                 </div>
             </div>
         </section>
 
-        <section id="work" class="section-space">
+        <section id="work" class="section-space section-fade reveal">
             <div class="container">
                 <div class="section-heading text-center">
                     <span class="section-kicker">Portfolio</span>
                     <h2>Featured Activities</h2>
-                    <p>Selected works and practical activities.</p>
+                    <p>Selected works that blend visual storytelling and practical implementation.</p>
                 </div>
-                <div class="row g-4">
+
+                <div class="row g-4 reveal stagger">
                     <div class="col-md-6">
-                        <article class="project-card h-100" style="border-radius:1.2rem; overflow:hidden; border:1px solid #d1dfef; background:#fff; box-shadow:0 18px 36px rgba(12,32,71,.14);">
-                            <img src="assets/mateBookSS.png" class="project-image" alt="Huawei Matebook D 16" style="height:220px; width:100%; object-fit:cover; border-bottom:1px solid #e4ecf7;">
-                            <div class="project-body" style="padding:1.3rem;">
-                                <h3 class="h5">Huawei Matebook D 16</h3>
-                                <p>Showcasing the Huawei Matebook D 16.</p>
+                        <article class="project-card h-100">
+                            <img src="assets/mateBookSS.png" class="project-image" alt="Huawei Matebook D 16">
+                            <div class="project-body">
+                                <h3>Huawei Matebook D 16</h3>
+                                <p>Product showcase page focused on clean sections and responsive behavior.</p>
                                 <div class="project-meta">
-                                    <span class="meta-chip" style="background:#fff1dd; border:1px solid rgba(217,123,31,.3);">UI Showcase</span>
-                                    <span class="meta-chip" style="background:#edf4ff; border:1px solid rgba(31,95,201,.3);">Responsive</span>
+                                    <span class="meta-chip">UI Showcase</span>
+                                    <span class="meta-chip">Responsive</span>
                                 </div>
-                                <a href="https://denscape.github.io/huawei-matebook-d16/" class="btn btn-pro"
-                                    target="_blank">Open Project</a>
+                                <a href="https://denscape.github.io/huawei-matebook-d16/" class="btn btn-main project-link" target="_blank"
+                                    rel="noopener noreferrer"><i class="fa-solid fa-arrow-up-right-from-square"></i><span>Open Project</span></a>
                             </div>
                         </article>
                     </div>
                     <div class="col-md-6">
-                        <article class="project-card h-100" style="border-radius:1.2rem; overflow:hidden; border:1px solid #d1dfef; background:#fff; box-shadow:0 18px 36px rgba(12,32,71,.14);">
-                            <img src="assets/amsterdam.png" class="project-image" alt="Amsterdam" style="height:220px; width:100%; object-fit:cover; border-bottom:1px solid #e4ecf7;">
-                            <div class="project-body" style="padding:1.3rem;">
-                                <h3 class="h5">Amsterdam</h3>
-                                <p>Uncovering the magic of Amsterdam.</p>
+                        <article class="project-card h-100">
+                            <img src="assets/amsterdam.png" class="project-image" alt="Amsterdam">
+                            <div class="project-body">
+                                <h3>Amsterdam</h3>
+                                <p>Destination-style web experience with immersive layout and visual rhythm.</p>
                                 <div class="project-meta">
-                                    <span class="meta-chip" style="background:#fff1dd; border:1px solid rgba(217,123,31,.3);">Travel Theme</span>
-                                    <span class="meta-chip" style="background:#edf4ff; border:1px solid rgba(31,95,201,.3);">Layout</span>
+                                    <span class="meta-chip">Travel Theme</span>
+                                    <span class="meta-chip">Layout</span>
                                 </div>
-                                <a href="https://denscape.github.io/amsterdam/" class="btn btn-pro"
-                                    target="_blank">Open Project</a>
+                                <a href="https://denscape.github.io/amsterdam/" class="btn btn-main project-link" target="_blank"
+                                    rel="noopener noreferrer"><i class="fa-solid fa-arrow-up-right-from-square"></i><span>Open Project</span></a>
                             </div>
                         </article>
                     </div>
                     <div class="col-md-6">
-                        <article class="project-card h-100" style="border-radius:1.2rem; overflow:hidden; border:1px solid #d1dfef; background:#fff; box-shadow:0 18px 36px rgba(12,32,71,.14);">
-                            <img src="assets/blackCloverGallery.jpg" class="project-image" alt="Black Clover Gallery" style="height:220px; width:100%; object-fit:cover; border-bottom:1px solid #e4ecf7;">
-                            <div class="project-body" style="padding:1.3rem;">
-                                <h3 class="h5">Black Clover Gallery</h3>
-                                <p>Simple gallery of Black Clover.</p>
+                        <article class="project-card h-100">
+                            <img src="assets/blackCloverGallery.jpg" class="project-image" alt="Black Clover Gallery">
+                            <div class="project-body">
+                                <h3>Black Clover Gallery</h3>
+                                <p>Visual gallery project using image hierarchy and interaction-focused structure.</p>
                                 <div class="project-meta">
-                                    <span class="meta-chip" style="background:#fff1dd; border:1px solid rgba(217,123,31,.3);">Gallery</span>
-                                    <span class="meta-chip" style="background:#edf4ff; border:1px solid rgba(31,95,201,.3);">Visual Design</span>
+                                    <span class="meta-chip">Gallery</span>
+                                    <span class="meta-chip">Visual Design</span>
                                 </div>
-                                <a href="https://denscape.github.io/gallery/" class="btn btn-pro" target="_blank">Open
-                                    Project</a>
+                                <a href="https://denscape.github.io/gallery/" class="btn btn-main project-link" target="_blank"
+                                    rel="noopener noreferrer"><i class="fa-solid fa-arrow-up-right-from-square"></i><span>Open Project</span></a>
                             </div>
                         </article>
                     </div>
                     <div class="col-md-6">
-                        <article class="project-card h-100" style="border-radius:1.2rem; overflow:hidden; border:1px solid #d1dfef; background:#fff; box-shadow:0 18px 36px rgba(12,32,71,.14);">
-                            <img src="assets/apiUpdate.jpg" class="project-image" alt="WebDev API" style="height:220px; width:100%; object-fit:cover; border-bottom:1px solid #e4ecf7;">
-                            <div class="project-body" style="padding:1.3rem;">
-                                <h3 class="h5">WebDev API</h3>
-                                <p>Simple weather API activity.</p>
+                        <article class="project-card h-100">
+                            <img src="assets/apiUpdate.jpg" class="project-image" alt="WebDev API">
+                            <div class="project-body">
+                                <h3>WebDev API</h3>
+                                <p>Weather API activity with JavaScript integration and practical API handling.</p>
                                 <div class="project-meta">
-                                    <span class="meta-chip" style="background:#fff1dd; border:1px solid rgba(217,123,31,.3);">API Integration</span>
-                                    <span class="meta-chip" style="background:#edf4ff; border:1px solid rgba(31,95,201,.3);">JavaScript</span>
+                                    <span class="meta-chip">API Integration</span>
+                                    <span class="meta-chip">JavaScript</span>
                                 </div>
-                                <a href="https://denscape.github.io/webdev-api/" class="btn btn-pro" target="_blank">Open
-                                    Project</a>
+                                <a href="https://denscape.github.io/webdev-api/" class="btn btn-main project-link" target="_blank"
+                                    rel="noopener noreferrer"><i class="fa-solid fa-arrow-up-right-from-square"></i><span>Open Project</span></a>
                             </div>
                         </article>
                     </div>
@@ -255,56 +245,57 @@
             </div>
         </section>
 
-        <section id="projects" class="section-space section-soft">
+        <section id="projects" class="section-space reveal">
             <div class="container">
                 <div class="section-heading text-center">
                     <span class="section-kicker">Experience</span>
                     <h2>Academic Projects</h2>
                     <p>Project outputs from key subjects and team collaborations.</p>
                 </div>
-                <div class="row g-4">
+
+                <div class="row g-4 reveal stagger">
                     <div class="col-md-6 col-xl-4">
-                        <article class="project-card h-100 compact" style="border-radius:1.2rem; overflow:hidden; border:1px solid #d1dfef; background:#fff; box-shadow:0 14px 28px rgba(12,32,71,.11);">
-                            <img src="assets/papernestProj.jpg" class="project-image" alt="PaperNest Project" style="height:180px; width:100%; object-fit:cover; border-bottom:1px solid #e4ecf7;">
-                            <div class="project-body" style="padding:1.15rem 1.2rem;">
-                                <h3 class="h6">papernest</h3>
-                                <p>Final Project in Object-Oriented Programming.</p>
+                        <article class="project-card compact h-100">
+                            <img src="assets/papernestProj.jpg" class="project-image" alt="PaperNest Project">
+                            <div class="project-body">
+                                <h3>papernest</h3>
+                                <p>Final project in Object-Oriented Programming.</p>
                             </div>
                         </article>
                     </div>
                     <div class="col-md-6 col-xl-4">
-                        <article class="project-card h-100 compact" style="border-radius:1.2rem; overflow:hidden; border:1px solid #d1dfef; background:#fff; box-shadow:0 14px 28px rgba(12,32,71,.11);">
-                            <img src="assets/easysmileProj.jpg" class="project-image" alt="EasySmile Project" style="height:180px; width:100%; object-fit:cover; border-bottom:1px solid #e4ecf7;">
-                            <div class="project-body" style="padding:1.15rem 1.2rem;">
-                                <h3 class="h6">EasySmile</h3>
-                                <p>Final Project in IPT - FE.</p>
+                        <article class="project-card compact h-100">
+                            <img src="assets/easysmileProj.jpg" class="project-image" alt="EasySmile Project">
+                            <div class="project-body">
+                                <h3>EasySmile</h3>
+                                <p>Final project in IPT - FE.</p>
                             </div>
                         </article>
                     </div>
                     <div class="col-md-6 col-xl-4">
-                        <article class="project-card h-100 compact" style="border-radius:1.2rem; overflow:hidden; border:1px solid #d1dfef; background:#fff; box-shadow:0 14px 28px rgba(12,32,71,.11);">
-                            <img src="assets/osMFPFCFS.png" class="project-image" alt="MFP FCFS Calculator" style="height:180px; width:100%; object-fit:cover; border-bottom:1px solid #e4ecf7;">
-                            <div class="project-body" style="padding:1.15rem 1.2rem;">
-                                <h3 class="h6">MFP - FCFS Calculator</h3>
-                                <p>Final Project in Operating Systems.</p>
+                        <article class="project-card compact h-100">
+                            <img src="assets/osMFPFCFS.png" class="project-image" alt="MFP FCFS Calculator">
+                            <div class="project-body">
+                                <h3>MFP - FCFS Calculator</h3>
+                                <p>Final project in Operating Systems.</p>
                             </div>
                         </article>
                     </div>
                     <div class="col-md-6 col-xl-4">
-                        <article class="project-card h-100 compact" style="border-radius:1.2rem; overflow:hidden; border:1px solid #d1dfef; background:#fff; box-shadow:0 14px 28px rgba(12,32,71,.11);">
-                            <img src="assets/dsaScheduling.png" class="project-image" alt="Scheduling Management" style="height:180px; width:100%; object-fit:cover; border-bottom:1px solid #e4ecf7;">
-                            <div class="project-body" style="padding:1.15rem 1.2rem;">
-                                <h3 class="h6">Scheduling Management</h3>
-                                <p>Final Project in Data Structures and Algorithms.</p>
+                        <article class="project-card compact h-100">
+                            <img src="assets/dsaScheduling.png" class="project-image" alt="Scheduling Management">
+                            <div class="project-body">
+                                <h3>Scheduling Management</h3>
+                                <p>Final project in Data Structures and Algorithms.</p>
                             </div>
                         </article>
                     </div>
                     <div class="col-md-6 col-xl-4">
-                        <article class="project-card h-100 compact" style="border-radius:1.2rem; overflow:hidden; border:1px solid #d1dfef; background:#fff; box-shadow:0 14px 28px rgba(12,32,71,.11);">
-                            <img src="assets/easyBuy.jpg" class="project-image" alt="EasyBuy x PackIT" style="height:180px; width:100%; object-fit:cover; border-bottom:1px solid #e4ecf7;">
-                            <div class="project-body" style="padding:1.15rem 1.2rem;">
-                                <h3 class="h6">EasyBuy x PackIT</h3>
-                                <p>Final Project in WebDev, SIA, and SAD.</p>
+                        <article class="project-card compact h-100">
+                            <img src="assets/easyBuy.jpg" class="project-image" alt="EasyBuy x PackIT">
+                            <div class="project-body">
+                                <h3>EasyBuy x PackIT</h3>
+                                <p>Final project in WebDev, SIA, and SAD.</p>
                             </div>
                         </article>
                     </div>
@@ -312,43 +303,43 @@
             </div>
         </section>
 
-        <section id="contact" class="section-space">
+        <section id="contact" class="section-space reveal">
             <div class="container">
                 <div class="section-heading text-center">
                     <span class="section-kicker">Connect</span>
-                    <h2>Contact</h2>
-                    <p>Let’s collaborate, build, and grow together.</p>
+                    <h2>Let's Build Something Great</h2>
+                    <p>Focused on growth through student collaborations and project-based learning.</p>
                 </div>
-                <div class="pro-card contact-card" style="padding:1.8rem; background:linear-gradient(160deg, rgba(255, 255, 255, 0.98), rgba(238, 245, 253, 0.98));">
+
+                <article class="contact-shell">
                     <div class="row g-4 align-items-center">
                         <div class="col-lg-7">
-                            <h3 class="h4">Open to opportunities and collaborations</h3>
-                            <p class="mb-0">Feel free to connect through my social profiles. I am available for student
-                                collaborations, project partnerships, and entry-level opportunities in IT and web
-                                development.</p>
+                            <h3>Focused on growth and collaborations</h3>
+                            <p>Feel free to connect through my social profiles. I am currently focused on skill-building,
+                                student collaborations, and project partnerships in networking and web development.</p>
                         </div>
                         <div class="col-lg-5">
                             <ul class="social-list">
-                                <li><a href="https://www.facebook.com/share/1BeQp4z34p/" target="_blank"><i
-                                            class="fa-brands fa-facebook"></i><span>Denmar Redondo</span></a></li>
-                                <li><a href="https://www.instagram.com/_denscape/" target="_blank"><i
+                                <li><a href="https://www.facebook.com/share/1BeQp4z34p/" target="_blank"
+                                        rel="noopener noreferrer"><i class="fa-brands fa-facebook"></i><span>Denmar Redondo</span></a></li>
+                                <li><a href="https://www.instagram.com/_denscape/" target="_blank" rel="noopener noreferrer"><i
                                             class="fa-brands fa-instagram"></i><span>@_denscape</span></a></li>
-                                <li><a href="https://www.linkedin.com/in/denmar-redondo/" target="_blank"><i
-                                            class="fa-brands fa-linkedin"></i><span>Denmar Redondo</span></a></li>
-                                <li><a href="https://github.com/Denscape" target="_blank"><i
+                                <li><a href="https://www.linkedin.com/in/denmar-redondo/" target="_blank"
+                                        rel="noopener noreferrer"><i class="fa-brands fa-linkedin"></i><span>Denmar Redondo</span></a></li>
+                                <li><a href="https://github.com/Denscape" target="_blank" rel="noopener noreferrer"><i
                                             class="fa-brands fa-github"></i><span>Denscape</span></a></li>
                             </ul>
                         </div>
                     </div>
-                </div>
+                </article>
             </div>
         </section>
     </main>
 
     <footer class="site-footer">
         <div class="container d-flex flex-column flex-md-row justify-content-between align-items-center gap-2">
-            <p class="mb-0">© 2026 Denmar Redondo</p>
-            <p class="mb-0">Built with focus, discipline, and continuous learning.</p>
+            <p class="mb-0">© 202 Denmar Redondo</p>
+            <p class="mb-0">Designed with discipline, curiosity, and creative engineering.</p>
         </div>
     </footer>
 
@@ -359,6 +350,7 @@
         window.addEventListener('DOMContentLoaded', function () {
             var navLinks = Array.from(document.querySelectorAll('.navbar .nav-link[href^="#"]'));
             var navbarMenu = document.getElementById('primaryNavbar');
+            var revealItems = Array.from(document.querySelectorAll('.reveal'));
 
             if (!navLinks.length) {
                 return;
@@ -394,10 +386,14 @@
                 .filter(Boolean);
 
             if ('IntersectionObserver' in window && sectionMap.length) {
-                var observer = new IntersectionObserver(function (entries) {
+                var navObserver = new IntersectionObserver(function (entries) {
                     var visible = entries
-                        .filter(function (entry) { return entry.isIntersecting; })
-                        .sort(function (a, b) { return b.intersectionRatio - a.intersectionRatio; });
+                        .filter(function (entry) {
+                            return entry.isIntersecting;
+                        })
+                        .sort(function (a, b) {
+                            return b.intersectionRatio - a.intersectionRatio;
+                        });
 
                     if (visible.length) {
                         var current = sectionMap.find(function (item) {
@@ -408,12 +404,30 @@
                 }, {
                     root: null,
                     threshold: 0.45,
-                    rootMargin: '-10% 0px -35% 0px'
+                    rootMargin: '-8% 0px -38% 0px'
                 });
 
                 sectionMap.forEach(function (item) {
-                    observer.observe(item.section);
+                    navObserver.observe(item.section);
                 });
+
+                if (revealItems.length) {
+                    var revealObserver = new IntersectionObserver(function (entries, observer) {
+                        entries.forEach(function (entry) {
+                            if (entry.isIntersecting) {
+                                entry.target.classList.add('is-visible');
+                                observer.unobserve(entry.target);
+                            }
+                        });
+                    }, {
+                        threshold: 0.2,
+                        rootMargin: '0px 0px -10% 0px'
+                    });
+
+                    revealItems.forEach(function (item) {
+                        revealObserver.observe(item);
+                    });
+                }
             }
 
             var initialLink = navLinks.find(function (item) {
