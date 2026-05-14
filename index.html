@@ -39,6 +39,7 @@
                         <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
                         <li class="nav-item"><a class="nav-link" href="#work">Activities</a></li>
                         <li class="nav-item"><a class="nav-link" href="#projects">Projects</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#certifications">Certifications</a></li>
                         <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
                     </ul>
                 </div>
@@ -303,6 +304,107 @@
             </div>
         </section>
 
+        <section id="certifications" class="section-space reveal">
+            <div class="container">
+                <div class="section-heading text-center">
+                    <span class="section-kicker">Credentials</span>
+                    <h2>Certifications and recognitions</h2>
+                    <p>Click preview to view the certificate in a larger, readable format.</p>
+                </div>
+
+                <div class="cert-grid reveal stagger">
+                    <article class="cert-card">
+                        <img src="assets/certificationsNetworking.jpg" alt="Cisco Networking Academy course completion"
+                            class="cert-thumb">
+                        <div class="cert-body">
+                            <div>
+                                <h3>Networking Basics Course Completion</h3>
+                                <p class="cert-issuer">Cisco Networking Academy</p>
+                                <p class="cert-date">Issued Sep 28, 2025</p>
+                            </div>
+                            <div class="cert-tags">
+                                <span class="cert-tag">Networking</span>
+                                <span class="cert-tag">Course Completion</span>
+                                <span class="cert-tag">Cisco</span>
+                            </div>
+                            <div class="cert-actions">
+                                <button class="btn btn-main cert-preview" type="button"
+                                    data-cert-title="Networking Basics Course Completion"
+                                    data-cert-image="assets/certificationsNetworking.jpg">Preview</button>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="cert-card">
+                        <img src="assets/ciscoCertification.jpg" alt="Cisco Networking Basics certificate"
+                            class="cert-thumb">
+                        <div class="cert-body">
+                            <div>
+                                <h3>Networking Basics Credential</h3>
+                                <p class="cert-issuer">DICT-ITU DTC Initiative</p>
+                                <p class="cert-date">Issued Sep 28, 2025</p>
+                            </div>
+                            <div class="cert-tags">
+                                <span class="cert-tag">Networking</span>
+                                <span class="cert-tag">Student Credential</span>
+                                <span class="cert-tag">Cisco</span>
+                            </div>
+                            <div class="cert-actions">
+                                <button class="btn btn-main cert-preview" type="button"
+                                    data-cert-title="Networking Basics Credential"
+                                    data-cert-image="assets/ciscoCertification.jpg">Preview</button>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="cert-card">
+                        <img src="assets/comsocCTF.png" alt="EduCTF 2026 COMSOC Hacking Competition certificate"
+                            class="cert-thumb">
+                        <div class="cert-body">
+                            <div>
+                                <h3>EduCTF 2026 COMSOC Hacking Competition</h3>
+                                <p class="cert-issuer">Computer Society - ERC</p>
+                                <p class="cert-date">Issued May 3, 2026</p>
+                            </div>
+                            <div class="cert-tags">
+                                <span class="cert-tag">Cybersecurity</span>
+                                <span class="cert-tag">Competition</span>
+                                <span class="cert-tag">6th Place</span>
+                            </div>
+                            <div class="cert-actions">
+                                <button class="btn btn-main cert-preview" type="button"
+                                    data-cert-title="EduCTF 2026 COMSOC Hacking Competition"
+                                    data-cert-image="assets/comsocCTF.png">Preview</button>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="cert-card">
+                        <img src="assets/aiAndMachineLearningCert.jpg"
+                            alt="Certificate of participation in AI and Machine Learning seminar"
+                            class="cert-thumb">
+                        <div class="cert-body">
+                            <div>
+                                <h3>AI and Machine Learning Seminar</h3>
+                                <p class="cert-issuer">PUP Research Institute for Strategic Foresight and Innovation</p>
+                                <p class="cert-date">Issued Dec 5, 2025</p>
+                            </div>
+                            <div class="cert-tags">
+                                <span class="cert-tag">AI</span>
+                                <span class="cert-tag">Seminar</span>
+                                <span class="cert-tag">Participation</span>
+                            </div>
+                            <div class="cert-actions">
+                                <button class="btn btn-main cert-preview" type="button"
+                                    data-cert-title="AI and Machine Learning Seminar"
+                                    data-cert-image="assets/aiAndMachineLearningCert.jpg">Preview</button>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
         <section id="contact" class="section-space reveal">
             <div class="container">
                 <div class="section-heading text-center">
@@ -334,6 +436,19 @@
                 </article>
             </div>
         </section>
+
+        <div class="cert-lightbox" id="certLightbox" aria-hidden="true">
+            <div class="cert-lightbox-backdrop" data-cert-close></div>
+            <div class="cert-lightbox-panel" role="dialog" aria-modal="true" aria-labelledby="certLightboxTitle">
+                <div class="cert-lightbox-header">
+                    <h5 id="certLightboxTitle">Certificate Preview</h5>
+                    <button type="button" class="btn-close" data-cert-close aria-label="Close"></button>
+                </div>
+                <div class="cert-lightbox-body">
+                    <img src="" alt="Certificate preview" class="cert-lightbox-image" id="certLightboxImage">
+                </div>
+            </div>
+        </div>
     </main>
 
     <footer class="site-footer">
@@ -429,6 +544,48 @@
                     });
                 }
             }
+
+            var lightbox = document.getElementById('certLightbox');
+            var lightboxTitle = document.getElementById('certLightboxTitle');
+            var lightboxImage = document.getElementById('certLightboxImage');
+
+            function openLightbox(title, imageSrc) {
+                if (!lightbox || !lightboxTitle || !lightboxImage) {
+                    return;
+                }
+
+                lightboxTitle.textContent = title;
+                lightboxImage.src = imageSrc;
+                lightbox.classList.add('is-active');
+                lightbox.setAttribute('aria-hidden', 'false');
+                document.body.classList.add('lightbox-open');
+            }
+
+            function closeLightbox() {
+                if (!lightbox) {
+                    return;
+                }
+
+                lightbox.classList.remove('is-active');
+                lightbox.setAttribute('aria-hidden', 'true');
+                document.body.classList.remove('lightbox-open');
+            }
+
+            document.querySelectorAll('.cert-preview').forEach(function (button) {
+                button.addEventListener('click', function () {
+                    openLightbox(button.dataset.certTitle, button.dataset.certImage);
+                });
+            });
+
+            document.querySelectorAll('[data-cert-close]').forEach(function (button) {
+                button.addEventListener('click', closeLightbox);
+            });
+
+            document.addEventListener('keydown', function (event) {
+                if (event.key === 'Escape') {
+                    closeLightbox();
+                }
+            });
 
             var initialLink = navLinks.find(function (item) {
                 return item.getAttribute('href') === (window.location.hash || '#home');

@@ -23,6 +23,10 @@
         color: var(--primary);
         box-shadow: none;
     }
+
+    .cert-hero-panel {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
 }
 
 @media (max-width: 575.98px) {
@@ -49,5 +53,13 @@
 
     .contact-shell {
         padding: 1.3rem;
+    }
+
+    .cert-hero-panel {
+        grid-template-columns: 1fr;
+    }
+
+    .cert-thumb {
+        height: 200px;
     }
 }

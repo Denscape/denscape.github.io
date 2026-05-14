@@ -371,6 +371,207 @@
     color: #ffffff;
 }
 
+.cert-hero {
+    background: linear-gradient(150deg, rgba(8, 12, 20, 0.72), rgba(12, 18, 31, 0.9));
+    border-bottom: 1px solid var(--line);
+}
+
+.cert-hero-title {
+    font-size: clamp(2rem, 4.4vw, 3.4rem);
+    margin-bottom: 0.9rem;
+}
+
+.cert-hero-subtitle {
+    max-width: 60ch;
+    font-size: 1.05rem;
+}
+
+.cert-hero-panel {
+    display: grid;
+    gap: 0.9rem;
+    grid-template-columns: 1fr;
+    padding: 1.4rem;
+    border-radius: 1.4rem;
+    border: 1px solid var(--line);
+    background: rgba(12, 18, 31, 0.82);
+    box-shadow: var(--shadow-soft);
+}
+
+.cert-highlight {
+    padding: 0.9rem 1rem;
+    border-radius: 1rem;
+    border: 1px solid rgba(67, 217, 189, 0.28);
+    background: rgba(67, 217, 189, 0.12);
+}
+
+.cert-highlight-number {
+    font-family: 'Cinzel', serif;
+    font-size: 1.3rem;
+    color: #b9f7e9;
+    margin-bottom: 0.2rem;
+}
+
+.cert-highlight-label {
+    margin-bottom: 0;
+    color: #a4b3cf;
+    font-size: 0.85rem;
+}
+
+.cert-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 1.4rem;
+}
+
+.cert-card {
+    border-radius: 1.2rem;
+    border: 1px solid var(--line);
+    background: var(--surface);
+    box-shadow: var(--shadow-soft);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.cert-card:hover {
+    transform: translateY(-6px);
+    border-color: rgba(67, 217, 189, 0.42);
+    box-shadow: var(--shadow-hard);
+}
+
+.cert-thumb {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.42s ease, filter 0.42s ease;
+    filter: saturate(1.05) contrast(1.02);
+}
+
+.cert-card:hover .cert-thumb {
+    transform: scale(1.06);
+    filter: saturate(1.22) contrast(1.08);
+}
+
+.cert-body {
+    padding: 1.35rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.85rem;
+    height: 100%;
+}
+
+.cert-body h3 {
+    font-family: 'Manrope', 'Segoe UI', sans-serif;
+    font-size: 1.1rem;
+    margin-bottom: 0.35rem;
+}
+
+.cert-issuer {
+    color: #d4deef;
+    font-weight: 600;
+    margin-bottom: 0.15rem;
+}
+
+.cert-date {
+    font-size: 0.85rem;
+    margin-bottom: 0;
+    color: #9fb0cb;
+}
+
+.cert-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.4rem;
+}
+
+.cert-tag {
+    border-radius: 999px;
+    border: 1px solid rgba(240, 178, 74, 0.35);
+    background: rgba(240, 178, 74, 0.12);
+    color: #ffd7a3;
+    font-size: 0.7rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    padding: 0.2rem 0.55rem;
+}
+
+.cert-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.65rem;
+    margin-top: auto;
+}
+
+.cert-lightbox {
+    position: fixed;
+    inset: 0;
+    z-index: 1055;
+    display: grid;
+    place-items: center;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.2s ease;
+}
+
+.cert-lightbox.is-active {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.cert-lightbox-backdrop {
+    position: absolute;
+    inset: 0;
+    background: rgba(4, 7, 12, 0.78);
+}
+
+.cert-lightbox-panel {
+    position: relative;
+    width: min(1100px, 92vw);
+    max-height: 86vh;
+    border-radius: 1.2rem;
+    border: 1px solid var(--line);
+    background: var(--surface-strong);
+    color: var(--ink);
+    box-shadow: var(--shadow-hard);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+}
+
+.cert-lightbox-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0.9rem 1.1rem;
+    border-bottom: 1px solid var(--line);
+}
+
+.cert-lightbox-header .btn-close {
+    filter: invert(1);
+}
+
+.cert-lightbox-body {
+    padding: 1rem;
+    overflow: auto;
+}
+
+.cert-lightbox-image {
+    width: 100%;
+    height: auto;
+    max-height: 72vh;
+    object-fit: contain;
+    border-radius: 0.9rem;
+    border: 1px solid var(--line);
+    background: #0b111d;
+}
+
+.lightbox-open {
+    overflow: hidden;
+}
+
 .site-footer {
     border-top: 1px solid var(--line);
     background: rgba(6, 9, 16, 0.9);

@@ -37,11 +37,16 @@
     background: radial-gradient(circle, rgba(121, 224, 255, 0.16), transparent 72%);
 }
 
-.site-header,
 main,
 .site-footer {
     position: relative;
     z-index: 1;
+}
+
+.site-header {
+    position: sticky;
+    top: 0;
+    z-index: 1030;
 }
 
 .site-header {
