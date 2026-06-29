@@ -3,8 +3,8 @@
         padding-top: 5.6rem;
     }
 
-    .snapshot-grid {
-        grid-template-columns: repeat(2, minmax(0, 1fr));
+    .skills-grid {
+        grid-template-columns: 1fr;
     }
 
     .navbar-collapse {
@@ -37,10 +37,6 @@
     .hero-title {
         font-size: clamp(1.9rem, 8vw, 2.8rem);
         max-width: 100%;
-    }
-
-    .snapshot-grid {
-        grid-template-columns: 1fr;
     }
 
     .project-image {

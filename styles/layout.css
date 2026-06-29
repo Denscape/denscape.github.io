@@ -61,10 +61,11 @@ main,
 }
 
 .brand-mark {
-    font-family: 'Cinzel', serif;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-weight: 800;
     color: #f5f8ff;
     text-transform: uppercase;
-    letter-spacing: 0.14em;
+    letter-spacing: 0.12em;
     font-size: 0.95rem;
 }
 

@@ -1,15 +1,10 @@
-.hero-badge {
-    display: inline-flex;
-    align-items: center;
-    gap: 0.45rem;
-    border-radius: 999px;
-    border: 1px solid var(--line-strong);
-    background: rgba(240, 178, 74, 0.1);
-    color: #ffd68f;
-    padding: 0.34rem 0.8rem;
-    font-size: 0.8rem;
+.hero-role {
+    display: inline-block;
+    color: var(--primary);
+    font-size: 1.05rem;
     font-weight: 700;
-    margin-bottom: 1.1rem;
+    letter-spacing: 0.04em;
+    margin-bottom: 0.6rem;
 }
 
 .hero-title {
@@ -25,21 +20,7 @@
     margin-bottom: 0;
 }
 
-.hero-tags {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 0.55rem;
-}
 
-.hero-tags span {
-    border-radius: 999px;
-    border: 1px solid var(--line);
-    background: rgba(13, 21, 37, 0.78);
-    color: #c9d6ef;
-    font-size: 0.78rem;
-    font-weight: 600;
-    padding: 0.34rem 0.68rem;
-}
 
 .profile-panel {
     width: min(22rem, 100%);
@@ -84,37 +65,22 @@
     font-weight: 700;
 }
 
+.status-dot {
+    font-size: 0.5rem;
+    color: #43d9bd;
+    animation: pulse-dot 2s ease-in-out infinite;
+}
+
+@keyframes pulse-dot {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.3; }
+}
+
 .hero-cta .btn {
     min-width: 9.5rem;
 }
 
-.snapshot-grid {
-    margin-top: 3rem;
-    display: grid;
-    grid-template-columns: repeat(4, minmax(0, 1fr));
-    gap: 0.9rem;
-}
 
-.snapshot-card {
-    border-radius: 1rem;
-    border: 1px solid var(--line);
-    background: rgba(12, 18, 31, 0.7);
-    padding: 1rem;
-}
-
-.stat-number {
-    font-family: 'Cinzel', serif;
-    font-size: clamp(1.2rem, 2.4vw, 1.7rem);
-    color: #aef6e5;
-    margin-bottom: 0.2rem;
-}
-
-.stat-label {
-    margin-bottom: 0;
-    color: #a5b3ce;
-    font-size: 0.8rem;
-    line-height: 1.45;
-}
 
 .pro-card,
 .project-card,
@@ -142,58 +108,64 @@
     margin-bottom: 0.9rem;
 }
 
-.icon-list,
-.focus-list,
-.social-list {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-}
-
-.icon-list {
+.skills-grid {
     display: grid;
-    gap: 0.62rem;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.2rem;
 }
 
-.icon-list li,
-.focus-list li {
+.skill-category {
+    border-radius: 1.35rem;
+    border: 1px solid var(--line);
+    background: var(--surface);
+    box-shadow: var(--shadow-soft);
+    padding: 1.45rem;
+    transition: transform 0.28s ease, border-color 0.28s ease;
+}
+
+.skill-category:hover {
+    transform: translateY(-4px);
+    border-color: rgba(67, 217, 189, 0.38);
+}
+
+.skill-category h3 {
+    font-family: 'Manrope', 'Segoe UI', sans-serif;
+    font-size: 1.05rem;
+    letter-spacing: 0.01em;
+    margin-bottom: 1rem;
     display: flex;
     align-items: center;
     gap: 0.55rem;
-    color: #d4deef;
-    font-weight: 600;
 }
 
-.icon-list i {
-    width: 1.1rem;
-    color: var(--accent);
-}
-
-.focus-list {
-    display: grid;
-    gap: 0.58rem;
-}
-
-.focus-list i {
+.skill-category h3 i {
     color: var(--primary);
-    width: 1rem;
-    font-size: 0.84rem;
+    font-size: 1rem;
 }
 
-.cert-row {
-    margin-top: 1rem;
+.skill-chips {
     display: flex;
-    justify-content: center;
     flex-wrap: wrap;
-    gap: 0.65rem;
+    gap: 0.5rem;
 }
 
-.cert-image {
-    width: 84px;
-    height: 84px;
-    object-fit: cover;
-    border-radius: 0.8rem;
+.skill-chip {
+    display: inline-flex;
+    align-items: center;
+    border-radius: 999px;
     border: 1px solid var(--line);
+    background: rgba(13, 21, 37, 0.78);
+    color: #c9d6ef;
+    font-size: 0.8rem;
+    font-weight: 600;
+    padding: 0.38rem 0.75rem;
+    transition: border-color 0.2s ease, background-color 0.2s ease, color 0.2s ease;
+}
+
+.skill-chip:hover {
+    border-color: rgba(67, 217, 189, 0.5);
+    background: var(--primary-soft);
+    color: #bdf9ec;
 }
 
 .project-card {
@@ -405,7 +377,8 @@
 }
 
 .cert-highlight-number {
-    font-family: 'Cinzel', serif;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-weight: 800;
     font-size: 1.3rem;
     color: #b9f7e9;
     margin-bottom: 0.2rem;
