@@ -2,7 +2,10 @@
  * Denscape Portfolio - Interactive Application Script
  */
 
-document.addEventListener('DOMContentLoaded', function () {
+document.addEventListener('DOMContentLoaded', async function () {
+    // 0. Async Component Loader
+    await loadComponents();
+
     // 1. Navigation & Scroll Spy
     initNavigation();
 
@@ -24,6 +27,38 @@ document.addEventListener('DOMContentLoaded', function () {
     // 7. Toast & Copy Email Utility
     initCopyUtilities();
 });
+
+/* ----------------------------------------------------
+ * 0. Async Component Loader
+ * ---------------------------------------------------- */
+async function loadComponents() {
+    const components = [
+        { id: 'header-root', file: 'components/header.html' },
+        { id: 'hero-root', file: 'components/hero.html' },
+        { id: 'skills-root', file: 'components/skills.html' },
+        { id: 'portfolio-root', file: 'components/portfolio.html' },
+        { id: 'academic-root', file: 'components/academic.html' },
+        { id: 'certifications-root', file: 'components/certifications.html' },
+        { id: 'contact-root', file: 'components/contact.html' },
+        { id: 'modals-root', file: 'components/modals.html' },
+        { id: 'footer-root', file: 'components/footer.html' }
+    ];
+
+    for (const comp of components) {
+        const rootElem = document.getElementById(comp.id);
+        if (rootElem && !rootElem.children.length) {
+            try {
+                const response = await fetch(comp.file);
+                if (response.ok) {
+                    const html = await response.text();
+                    rootElem.innerHTML = html;
+                }
+            } catch (err) {
+                console.warn(`Could not load component ${comp.file}:`, err);
+            }
+        }
+    }
+}
 
 /* ----------------------------------------------------
  * 1. Navigation & Scroll Spy
@@ -423,4 +458,3 @@ function showToast(message) {
         setTimeout(() => toast.remove(), 300);
     }, 3000);
 }
-

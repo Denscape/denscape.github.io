@@ -1,0 +1,49 @@
+<!-- Certificate Lightbox Modal -->
+<div class="cert-lightbox" id="certLightbox" aria-hidden="true">
+    <div class="cert-lightbox-backdrop" data-cert-close></div>
+    <div class="cert-lightbox-panel" role="dialog" aria-modal="true" aria-labelledby="certLightboxTitle">
+        <div class="cert-lightbox-header">
+            <h5 id="certLightboxTitle">Certificate Credential Preview</h5>
+            <button type="button" class="btn-close-lightbox" data-cert-close aria-label="Close modal">
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+        </div>
+        <div class="cert-lightbox-body">
+            <img src="" alt="Certificate preview" class="cert-lightbox-image" id="certLightboxImage">
+        </div>
+    </div>
+</div>
+
+<!-- Cyber Terminal Interactive Modal -->
+<div class="cyber-terminal-modal" id="cyberTerminalModal" aria-hidden="true">
+    <div class="cyber-terminal-backdrop" data-close-terminal></div>
+    <div class="cyber-terminal-box" role="dialog" aria-modal="true">
+        <div class="terminal-header">
+            <div class="terminal-dots">
+                <span class="dot dot-red" data-close-terminal title="Close terminal"></span>
+                <span class="dot dot-yellow"></span>
+                <span class="dot dot-green"></span>
+            </div>
+            <span class="terminal-title">visitor@denscape-cli ~ (bash)</span>
+            <span class="text-xs text-muted">Press ESC to exit</span>
+        </div>
+        <div class="terminal-body" id="terminalOutput">
+            <p style="color:var(--primary); font-weight:700;">Denscape Interactive Cyber Terminal v2.0</p>
+            <p style="color:var(--muted);">Type '<span style="color:var(--primary);">help</span>' or click a command below:</p>
+            <div class="terminal-quick-chips my-2 d-flex flex-wrap gap-1">
+                <button class="term-chip" data-term-cmd="whoami">whoami</button>
+                <button class="term-chip" data-term-cmd="skills">skills</button>
+                <button class="term-chip" data-term-cmd="projects">projects</button>
+                <button class="term-chip" data-term-cmd="certs">certs</button>
+                <button class="term-chip" data-term-cmd="contact">contact</button>
+                <button class="term-chip" data-term-cmd="clear">clear</button>
+            </div>
+        </div>
+        <div class="px-3 pb-3">
+            <div class="terminal-prompt-line">
+                <span class="prompt-symbol">visitor@denscape:~$</span>
+                <input type="text" id="terminalInput" class="terminal-input" placeholder="Type a command (e.g. help, whoami, skills, projects)..." autocomplete="off" spellcheck="false">
+            </div>
+        </div>
+    </div>
+</div>
