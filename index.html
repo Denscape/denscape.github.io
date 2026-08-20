@@ -4,127 +4,203 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Denscape's Portfolio</title>
+    <title>Denmar Redondo | IT, Cybersecurity & Software Engineer Portfolio</title>
     <meta name="description"
-        content="Creative portfolio of Denmar Redondo featuring networking, cybersecurity, and web development projects.">
+        content="Professional portfolio of Denmar Redondo (Denscape) featuring Networking, Cybersecurity, Frontend Web Development, and Academic Projects.">
     <link rel="icon" type="image/svg+xml" href="assets/densicon.svg">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500;600;700&family=Plus+Jakarta+Sans:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400&display=swap"
+        rel="stylesheet">
+
+    <!-- Stylesheets -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
-    <link
-        href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@500;700;800&family=Manrope:wght@400;500;700;800&display=swap"
-        rel="stylesheet">
     <link rel="stylesheet" href="index.css">
 </head>
 
 <body>
+    <!-- Ambient Dynamic Light Layer -->
     <div class="ambient-layer" aria-hidden="true">
         <span class="orb orb-1"></span>
         <span class="orb orb-2"></span>
         <span class="orb orb-3"></span>
     </div>
 
+    <!-- Navigation Bar -->
     <header class="site-header sticky-top">
         <div class="container">
             <nav class="navbar navbar-expand-lg pro-navbar" aria-label="Primary navigation">
                 <a class="navbar-brand brand-mark" href="#home">Denscape</a>
+
+                <div class="d-flex align-items-center gap-2 d-lg-none ms-auto me-2">
+                    <button class="btn-terminal-nav" data-open-terminal aria-label="Open Terminal Modal">
+                        <i class="fa-solid fa-terminal"></i>
+                        <span>CLI</span>
+                    </button>
+                </div>
+
                 <button class="navbar-toggler pro-toggler" type="button" data-bs-toggle="collapse"
                     data-bs-target="#primaryNavbar" aria-controls="primaryNavbar" aria-expanded="false"
                     aria-label="Toggle navigation">
                     <i class="fas fa-bars"></i>
                 </button>
+
                 <div class="collapse navbar-collapse" id="primaryNavbar">
-                    <ul class="navbar-nav ms-auto align-items-lg-center gap-lg-2">
+                    <ul class="navbar-nav ms-auto align-items-lg-center gap-lg-1">
                         <li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#portfolio">Portfolio</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#about">Tech Stack</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#portfolio">Featured Work</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#projects">Academic</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#certifications">Certifications</a></li>
                         <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
                     </ul>
+                    <div class="d-none d-lg-flex ms-lg-3">
+                        <button class="btn-terminal-nav" data-open-terminal title="Launch Cyber Terminal (Ctrl+K)">
+                            <i class="fa-solid fa-terminal"></i>
+                            <span>>_ Terminal</span>
+                        </button>
+                    </div>
                 </div>
             </nav>
         </div>
     </header>
 
     <main>
+        <!-- Hero Section -->
         <section id="home" class="hero-section reveal">
             <div class="container">
-                <div class="row align-items-center gy-4">
+                <div class="row align-items-center gy-5">
                     <div class="col-lg-7 text-center text-lg-start">
-                        <h1 class="hero-title">Denmar Redondo</h1>
-                        <p class="hero-role">IT Student · Networking · Cybersecurity · Web Development</p>
-                        <p class="hero-subtitle">Building practical skills in network infrastructure, security, and
-                            full-stack web projects.</p>
+                        <div class="hero-role">
+                            <i class="fa-solid fa-code"></i>
+                            <span>IT Student · Networking · Cybersecurity · Frontend Developer</span>
+                        </div>
+                        <h1 class="hero-title">
+                            Engineering <span class="highlight">Secure & Smart</span> Digital Infrastructure
+                        </h1>
+                        <p class="hero-subtitle">
+                            Hi, I'm <strong>Denmar Redondo</strong>. I design and build robust network systems,
+                            cybersecurity platforms, and modern web applications with precision and clean architecture.
+                        </p>
 
                         <div
-                            class="hero-cta d-flex flex-wrap gap-2 mt-4 justify-content-center justify-content-lg-start">
-                            <a href="#portfolio" class="btn btn-main">Explore Work</a>
-                            <a href="#contact" class="btn btn-ghost">Let's Connect</a>
+                            class="hero-cta d-flex flex-wrap gap-3 mt-4 justify-content-center justify-content-lg-start">
+                            <a href="#portfolio" class="btn btn-main">
+                                <i class="fa-solid fa-rocket"></i>
+                                <span>Explore Work</span>
+                            </a>
                             <a href="assets/curriculumVitae.jpg" target="_blank" rel="noopener noreferrer"
-                                class="btn btn-ghost" aria-label="Open CV">View CV</a>
+                                class="btn btn-outline-cyan">
+                                <i class="fa-solid fa-file-arrow-down"></i>
+                                <span>View CV</span>
+                            </a>
+                            <a href="#contact" class="btn btn-ghost">
+                                <i class="fa-solid fa-paper-plane"></i>
+                                <span>Let's Connect</span>
+                            </a>
                         </div>
                     </div>
 
                     <div class="col-lg-5">
                         <article class="profile-panel mx-auto">
-                            <img src="assets/Diesel.jpg" alt="Denmar Redondo" class="profile-photo" width="260"
-                                height="260">
                             <div class="profile-glow" aria-hidden="true"></div>
-                            <div class="status-pill"><i class="fa-solid fa-circle status-dot"></i>Open to Opportunities
+                            <img src="assets/Diesel.jpg" alt="Denmar Redondo profile avatar" class="profile-photo"
+                                width="280" height="280">
+                            <div class="d-flex justify-content-between align-items-center mt-2">
+                                <div class="status-pill">
+                                    <i class="fa-solid fa-circle status-dot"></i>
+                                    <span>Available for Opportunities</span>
+                                </div>
+                                <button class="btn btn-terminal-nav py-1 px-2 text-xs" data-open-terminal
+                                    title="Quick CLI info">
+                                    <i class="fa-solid fa-code"></i> CLI
+                                </button>
                             </div>
                         </article>
+                    </div>
+                </div>
+
+                <!-- Stats Metric Bar -->
+                <div class="stats-strip reveal">
+                    <div class="stat-item">
+                        <div class="stat-number" data-target="11" data-suffix="+">0</div>
+                        <div class="stat-label">Projects Built</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number" data-target="6" data-prefix="#" data-suffix=" Place">0</div>
+                        <div class="stat-label">COMSOC CTF Rank</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number" data-target="5" data-suffix=" Certs">0</div>
+                        <div class="stat-label">Verified Badges</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number" data-target="4" data-suffix=" Tech Areas">0</div>
+                        <div class="stat-label">Core Domains</div>
                     </div>
                 </div>
             </div>
         </section>
 
+        <!-- Tech Stack Section -->
         <section id="about" class="section-space reveal">
             <div class="container">
                 <div class="section-heading text-center">
-                    <span class="section-kicker">Skills</span>
-                    <h2>Tech Stack</h2>
-                    <p>Technologies and tools I work with across networking, security, and development.</p>
+                    <span class="section-kicker"><i class="fa-solid fa-layer-group"></i> Expertise</span>
+                    <h2>Technical Stack & Tools</h2>
+                    <p>Technologies, frameworks, and specialized software across networking, security, and web
+                        development.</p>
                 </div>
 
                 <div class="skills-grid reveal stagger">
                     <article class="skill-category">
                         <h3><i class="fa-solid fa-network-wired"></i>Networking</h3>
                         <div class="skill-chips">
-                            <span class="skill-chip">IP Configuration</span>
-                            <span class="skill-chip">Routing</span>
-                            <span class="skill-chip">Cisco IOS</span>
-                            <span class="skill-chip">Troubleshooting</span>
-                            <span class="skill-chip">Network Protocols</span>
+                            <span class="skill-chip"><i class="fa-solid fa-globe"></i> IP Configuration</span>
+                            <span class="skill-chip"><i class="fa-solid fa-route"></i> Routing Protocols</span>
+                            <span class="skill-chip"><i class="fa-solid fa-terminal"></i> Cisco IOS</span>
+                            <span class="skill-chip"><i class="fa-solid fa-screwdriver-wrench"></i>
+                                Troubleshooting</span>
+                            <span class="skill-chip"><i class="fa-solid fa-diagram-project"></i> Network
+                                Architecture</span>
                         </div>
                     </article>
+
                     <article class="skill-category">
                         <h3><i class="fa-solid fa-shield-halved"></i>Cybersecurity</h3>
                         <div class="skill-chips">
-                            <span class="skill-chip">CTF Competitions</span>
-                            <span class="skill-chip">Network Security</span>
-                            <span class="skill-chip">Cryptography Basics</span>
-                            <span class="skill-chip">Secure Coding</span>
-                            <span class="skill-chip">Phishing Defense</span>
+                            <span class="skill-chip"><i class="fa-solid fa-flag"></i> CTF Competitions</span>
+                            <span class="skill-chip"><i class="fa-solid fa-lock"></i> Network Security</span>
+                            <span class="skill-chip"><i class="fa-solid fa-key"></i> Cryptography Basics</span>
+                            <span class="skill-chip"><i class="fa-solid fa-code-security"></i> Secure Coding</span>
+                            <span class="skill-chip"><i class="fa-solid fa-user-shield"></i> Phishing Defense</span>
                         </div>
                     </article>
+
                     <article class="skill-category">
                         <h3><i class="fa-solid fa-code"></i>Development</h3>
                         <div class="skill-chips">
-                            <span class="skill-chip">HTML</span>
-                            <span class="skill-chip">CSS</span>
-                            <span class="skill-chip">JavaScript</span>
-                            <span class="skill-chip">REST APIs</span>
-                            <span class="skill-chip">Bootstrap</span>
-                            <span class="skill-chip">Responsive Design</span>
-                            <span class="skill-chip">Git</span>
+                            <span class="skill-chip"><i class="fa-brands fa-html5"></i> HTML5</span>
+                            <span class="skill-chip"><i class="fa-brands fa-css3-alt"></i> CSS3</span>
+                            <span class="skill-chip"><i class="fa-brands fa-js"></i> JavaScript</span>
+                            <span class="skill-chip"><i class="fa-solid fa-gears"></i> REST APIs</span>
+                            <span class="skill-chip"><i class="fa-brands fa-bootstrap"></i> Bootstrap</span>
+                            <span class="skill-chip"><i class="fa-solid fa-mobile-screen"></i> Responsive UI</span>
+                            <span class="skill-chip"><i class="fa-brands fa-git-alt"></i> Git & GitHub</span>
                         </div>
                     </article>
+
                     <article class="skill-category">
-                        <h3><i class="fa-solid fa-wrench"></i>Tools</h3>
+                        <h3><i class="fa-solid fa-wrench"></i>Tools & Software</h3>
                         <div class="skill-chips">
                             <span class="skill-chip">VS Code</span>
                             <span class="skill-chip">Power BI</span>
                             <span class="skill-chip">DBeaver (SQL)</span>
-                            <span class="skill-chip">GitHub</span>
                             <span class="skill-chip">Figma</span>
                             <span class="skill-chip">Photoshop</span>
                             <span class="skill-chip">Docker</span>
@@ -137,18 +213,39 @@
             </div>
         </section>
 
+        <!-- Featured Portfolio Section with Dynamic Filter & Search -->
         <section id="portfolio" class="section-space section-fade reveal">
             <div class="container">
                 <div class="section-heading text-center">
-                    <span class="section-kicker">Portfolio</span>
-                    <h2>Featured Activities</h2>
-                    <p>Selected works that blend visual storytelling and practical implementation.</p>
+                    <span class="section-kicker"><i class="fa-solid fa-folder-open"></i> Portfolio</span>
+                    <h2>Featured Activities & Live Projects</h2>
+                    <p>Interactive web apps, cybersecurity platforms, and visual experiences built for real impact.</p>
                 </div>
 
-                <div class="row g-4 reveal stagger">
-                    <div class="col-md-6">
+                <!-- Controls Bar -->
+                <div class="portfolio-controls">
+                    <div class="filter-pills">
+                        <button class="filter-btn active" data-filter="all">All Work</button>
+                        <button class="filter-btn" data-filter="security">Security & Systems</button>
+                        <button class="filter-btn" data-filter="web">Web Apps & APIs</button>
+                        <button class="filter-btn" data-filter="design">UI & Gallery</button>
+                    </div>
+                    <div class="search-box">
+                        <i class="fa-solid fa-magnifying-glass search-icon"></i>
+                        <input type="text" id="projectSearchInput" class="search-input"
+                            placeholder="Search projects or stack...">
+                    </div>
+                </div>
+
+                <div class="row g-4 reveal stagger" id="portfolioGrid">
+                    <!-- Project 1 -->
+                    <div class="col-md-6 col-lg-4 portfolio-item" data-category="security web">
                         <article class="project-card h-100">
-                            <img src="assets/cyberSecurity.png" class="project-image" alt="CyberShield">
+                            <div class="project-image-wrapper">
+                                <span class="project-badge-overlay"><i class="fa-solid fa-shield-halved"></i>
+                                    Cybersecurity</span>
+                                <img src="assets/cyberSecurity.png" class="project-image" alt="CyberShield Platform">
+                            </div>
                             <div class="project-body">
                                 <h3>CyberShield</h3>
                                 <p>Interactive cybersecurity learning platform featuring modules on network security,
@@ -156,107 +253,148 @@
                                 <div class="project-meta">
                                     <span class="meta-chip">Cybersecurity</span>
                                     <span class="meta-chip">Interactive Learning</span>
+                                    <span class="meta-chip">JS</span>
                                 </div>
-                                <div class="project-actions d-flex gap-2">
+                                <div class="project-actions">
                                     <a href="https://denscape.github.io/cybersec/" class="btn btn-main project-link"
-                                        target="_blank" rel="noopener noreferrer"><i
-                                            class="fa-solid fa-arrow-up-right-from-square"></i><span>Live
-                                            Demo</span></a>
+                                        target="_blank" rel="noopener noreferrer">
+                                        <i class="fa-solid fa-arrow-up-right-from-square"></i> Live Demo
+                                    </a>
                                 </div>
                             </div>
                         </article>
                     </div>
-                    <div class="col-md-6">
+
+                    <!-- Project 2 -->
+                    <div class="col-md-6 col-lg-4 portfolio-item" data-category="web">
                         <article class="project-card h-100">
-                            <img src="assets/apiUpdate.jpg" class="project-image" alt="WebDev API">
+                            <div class="project-image-wrapper">
+                                <span class="project-badge-overlay"><i class="fa-solid fa-cloud-sun"></i> API
+                                    Platform</span>
+                                <img src="assets/apiUpdate.jpg" class="project-image" alt="Weather Hub Project">
+                            </div>
                             <div class="project-body">
                                 <h3>Weather Hub</h3>
-                                <p>Weather API activity with JavaScript integration and practical API handling.</p>
+                                <p>Weather API activity with JavaScript integration, live data fetching, and responsive
+                                    weather condition displays.</p>
                                 <div class="project-meta">
-                                    <span class="meta-chip">API Integration</span>
+                                    <span class="meta-chip">REST API</span>
                                     <span class="meta-chip">JavaScript</span>
+                                    <span class="meta-chip">Async Fetch</span>
                                 </div>
-                                <div class="project-actions d-flex gap-2">
+                                <div class="project-actions">
                                     <a href="https://denscape.github.io/webdev-api/" class="btn btn-main project-link"
-                                        target="_blank" rel="noopener noreferrer"><i
-                                            class="fa-solid fa-arrow-up-right-from-square"></i><span>Live
-                                            Demo</span></a>
+                                        target="_blank" rel="noopener noreferrer">
+                                        <i class="fa-solid fa-arrow-up-right-from-square"></i> Live Demo
+                                    </a>
                                 </div>
                             </div>
                         </article>
                     </div>
-                    <div class="col-md-6">
+
+                    <!-- Project 3 -->
+                    <div class="col-md-6 col-lg-4 portfolio-item" data-category="web">
                         <article class="project-card h-100">
-                            <img src="assets/restCountries.png" class="project-image" alt="RestCountries">
+                            <div class="project-image-wrapper">
+                                <span class="project-badge-overlay"><i class="fa-solid fa-earth-americas"></i> Data
+                                    Explorer</span>
+                                <img src="assets/restCountries.png" class="project-image"
+                                    alt="AXIS Rest Countries Project">
+                            </div>
                             <div class="project-body">
                                 <h3>AXIS</h3>
-                                <p>Rest Countries API for Country Data Explorer.</p>
+                                <p>Comprehensive country data explorer built with the Rest Countries API featuring
+                                    filterable region search and details.</p>
                                 <div class="project-meta">
                                     <span class="meta-chip">Rest Countries API</span>
                                     <span class="meta-chip">JavaScript</span>
+                                    <span class="meta-chip">UI Layout</span>
                                 </div>
-                                <div class="project-actions d-flex gap-2">
+                                <div class="project-actions">
                                     <a href="https://denscape.github.io/axis/" class="btn btn-main project-link"
-                                        target="_blank" rel="noopener noreferrer"><i
-                                            class="fa-solid fa-arrow-up-right-from-square"></i><span>Live
-                                            Demo</span></a>
+                                        target="_blank" rel="noopener noreferrer">
+                                        <i class="fa-solid fa-arrow-up-right-from-square"></i> Live Demo
+                                    </a>
                                 </div>
                             </div>
                         </article>
                     </div>
-                    <div class="col-md-6">
+
+                    <!-- Project 4 -->
+                    <div class="col-md-6 col-lg-4 portfolio-item" data-category="design web">
                         <article class="project-card h-100">
-                            <img src="assets/huaweiMatebook.png" class="project-image" alt="Huawei Matebook D 16">
+                            <div class="project-image-wrapper">
+                                <span class="project-badge-overlay"><i class="fa-solid fa-laptop"></i> Hardware
+                                    UI</span>
+                                <img src="assets/huaweiMatebook.png" class="project-image"
+                                    alt="Huawei Matebook D 16 Showcase">
+                            </div>
                             <div class="project-body">
                                 <h3>Huawei Matebook D 16</h3>
-                                <p>Product showcase page focused on clean sections and responsive behavior.</p>
+                                <p>Product showcase landing page focused on clean aesthetic sections, crisp modern
+                                    typography, and fluid responsive design.</p>
                                 <div class="project-meta">
                                     <span class="meta-chip">UI Showcase</span>
-                                    <span class="meta-chip">Responsive</span>
+                                    <span class="meta-chip">Responsive Design</span>
                                 </div>
-                                <div class="project-actions d-flex gap-2">
+                                <div class="project-actions">
                                     <a href="https://denscape.github.io/huawei-matebook-d16/"
-                                        class="btn btn-main project-link" target="_blank" rel="noopener noreferrer"><i
-                                            class="fa-solid fa-arrow-up-right-from-square"></i><span>Live
-                                            Demo</span></a>
+                                        class="btn btn-main project-link" target="_blank" rel="noopener noreferrer">
+                                        <i class="fa-solid fa-arrow-up-right-from-square"></i> Live Demo
+                                    </a>
                                 </div>
                             </div>
                         </article>
                     </div>
-                    <div class="col-md-6">
+
+                    <!-- Project 5 -->
+                    <div class="col-md-6 col-lg-4 portfolio-item" data-category="design">
                         <article class="project-card h-100">
-                            <img src="assets/amsterdam.png" class="project-image" alt="Amsterdam">
+                            <div class="project-image-wrapper">
+                                <span class="project-badge-overlay"><i class="fa-solid fa-plane-departure"></i> Travel
+                                    UI</span>
+                                <img src="assets/amsterdam.png" class="project-image" alt="Amsterdam Travel Experience">
+                            </div>
                             <div class="project-body">
-                                <h3>Amsterdam</h3>
-                                <p>Destination-style web experience with immersive layout and visual rhythm.</p>
+                                <h3>Amsterdam Experience</h3>
+                                <p>Immersive destination landing page featuring rich layout composition, smooth visual
+                                    flow, and interactive sections.</p>
                                 <div class="project-meta">
                                     <span class="meta-chip">Travel Theme</span>
-                                    <span class="meta-chip">Layout</span>
+                                    <span class="meta-chip">Layout Architecture</span>
                                 </div>
-                                <div class="project-actions d-flex gap-2">
+                                <div class="project-actions">
                                     <a href="https://denscape.github.io/amsterdam/" class="btn btn-main project-link"
-                                        target="_blank" rel="noopener noreferrer"><i
-                                            class="fa-solid fa-arrow-up-right-from-square"></i><span>Live
-                                            Demo</span></a>
+                                        target="_blank" rel="noopener noreferrer">
+                                        <i class="fa-solid fa-arrow-up-right-from-square"></i> Live Demo
+                                    </a>
                                 </div>
                             </div>
                         </article>
                     </div>
-                    <div class="col-md-6">
+
+                    <!-- Project 6 -->
+                    <div class="col-md-6 col-lg-4 portfolio-item" data-category="design">
                         <article class="project-card h-100">
-                            <img src="assets/blackCloverGallery.jpg" class="project-image" alt="Black Clover Gallery">
+                            <div class="project-image-wrapper">
+                                <span class="project-badge-overlay"><i class="fa-solid fa-images"></i> Media
+                                    Gallery</span>
+                                <img src="assets/blackCloverGallery.jpg" class="project-image"
+                                    alt="Black Clover Gallery">
+                            </div>
                             <div class="project-body">
                                 <h3>Black Clover Gallery</h3>
-                                <p>Visual gallery project using image hierarchy and interaction-focused structure.</p>
+                                <p>Visual gallery web app showcasing dynamic image grids, card hierarchy, and smooth
+                                    hover interactions.</p>
                                 <div class="project-meta">
                                     <span class="meta-chip">Gallery</span>
-                                    <span class="meta-chip">Visual Design</span>
+                                    <span class="meta-chip">Visual Hierarchy</span>
                                 </div>
-                                <div class="project-actions d-flex gap-2">
+                                <div class="project-actions">
                                     <a href="https://denscape.github.io/gallery/" class="btn btn-main project-link"
-                                        target="_blank" rel="noopener noreferrer"><i
-                                            class="fa-solid fa-arrow-up-right-from-square"></i><span>Live
-                                            Demo</span></a>
+                                        target="_blank" rel="noopener noreferrer">
+                                        <i class="fa-solid fa-arrow-up-right-from-square"></i> Live Demo
+                                    </a>
                                 </div>
                             </div>
                         </article>
@@ -265,57 +403,95 @@
             </div>
         </section>
 
+        <!-- Academic Projects Experience Section -->
         <section id="projects" class="section-space reveal">
             <div class="container">
                 <div class="section-heading text-center">
-                    <span class="section-kicker">Experience</span>
-                    <h2>Academic Projects</h2>
-                    <p>Project outputs from key subjects and team collaborations.</p>
+                    <span class="section-kicker"><i class="fa-solid fa-graduation-cap"></i> Academic</span>
+                    <h2>Subject & Capstone Projects</h2>
+                    <p>Key software projects developed for core Computer Science & IT coursework.</p>
                 </div>
 
                 <div class="row g-4 reveal stagger">
-                    <div class="col-md-6 col-xl-4">
+                    <div class="col-md-6 col-lg-4">
                         <article class="project-card compact h-100">
-                            <img src="assets/papernestProj.jpg" class="project-image" alt="PaperNest Project">
+                            <div class="project-image-wrapper">
+                                <img src="assets/papernestProj.jpg" class="project-image" alt="PaperNest Project">
+                            </div>
                             <div class="project-body">
-                                <h3>papernest</h3>
-                                <p>Final project in Object-Oriented Programming.</p>
+                                <h3>PaperNest</h3>
+                                <p>Final Project in Object-Oriented Programming (OOP) highlighting structural design
+                                    patterns.</p>
+                                <div class="project-meta">
+                                    <span class="meta-chip">OOP</span>
+                                    <span class="meta-chip">Architecture</span>
+                                </div>
                             </div>
                         </article>
                     </div>
-                    <div class="col-md-6 col-xl-4">
+
+                    <div class="col-md-6 col-lg-4">
                         <article class="project-card compact h-100">
-                            <img src="assets/easysmileProj.jpg" class="project-image" alt="EasySmile Project">
+                            <div class="project-image-wrapper">
+                                <img src="assets/easysmileProj.jpg" class="project-image" alt="EasySmile Project">
+                            </div>
                             <div class="project-body">
                                 <h3>EasySmile</h3>
-                                <p>Final project in IPT - FE.</p>
+                                <p>Final Project in Information Technology Professional Elective (IPT - FE).</p>
+                                <div class="project-meta">
+                                    <span class="meta-chip">IPT - FE</span>
+                                    <span class="meta-chip">Full App</span>
+                                </div>
                             </div>
                         </article>
                     </div>
-                    <div class="col-md-6 col-xl-4">
+
+                    <div class="col-md-6 col-lg-4">
                         <article class="project-card compact h-100">
-                            <img src="assets/osMFPFCFS.png" class="project-image" alt="MFP FCFS Calculator">
+                            <div class="project-image-wrapper">
+                                <img src="assets/osMFPFCFS.png" class="project-image" alt="MFP FCFS Calculator">
+                            </div>
                             <div class="project-body">
                                 <h3>MFP - FCFS Calculator</h3>
-                                <p>Final project in Operating Systems.</p>
+                                <p>Operating Systems final project calculating Multi-Level Feedback &
+                                    First-Come-First-Serve algorithms.</p>
+                                <div class="project-meta">
+                                    <span class="meta-chip">Operating Systems</span>
+                                    <span class="meta-chip">Algorithms</span>
+                                </div>
                             </div>
                         </article>
                     </div>
-                    <div class="col-md-6 col-xl-4">
+
+                    <div class="col-md-6 col-lg-4">
                         <article class="project-card compact h-100">
-                            <img src="assets/dsaScheduling.png" class="project-image" alt="Scheduling Management">
+                            <div class="project-image-wrapper">
+                                <img src="assets/dsaScheduling.png" class="project-image" alt="Scheduling Management">
+                            </div>
                             <div class="project-body">
                                 <h3>Scheduling Management</h3>
-                                <p>Final project in Data Structures and Algorithms.</p>
+                                <p>Data Structures and Algorithms final project optimizing task scheduling queues.</p>
+                                <div class="project-meta">
+                                    <span class="meta-chip">DSA</span>
+                                    <span class="meta-chip">Queueing Theory</span>
+                                </div>
                             </div>
                         </article>
                     </div>
-                    <div class="col-md-6 col-xl-4">
+
+                    <div class="col-md-6 col-lg-4">
                         <article class="project-card compact h-100">
-                            <img src="assets/easyBuy.jpg" class="project-image" alt="EasyBuy x PackIT">
+                            <div class="project-image-wrapper">
+                                <img src="assets/easyBuy.jpg" class="project-image" alt="EasyBuy x PackIT">
+                            </div>
                             <div class="project-body">
                                 <h3>EasyBuy x PackIT</h3>
-                                <p>Final project in WebDev, SIA, and SAD.</p>
+                                <p>Collaborative project spanning Web Development, Systems Integration & Architecture
+                                    (SIA), and SAD.</p>
+                                <div class="project-meta">
+                                    <span class="meta-chip">WebDev & SIA</span>
+                                    <span class="meta-chip">System Design</span>
+                                </div>
                             </div>
                         </article>
                     </div>
@@ -323,153 +499,185 @@
             </div>
         </section>
 
+        <!-- Certifications Section -->
         <section id="certifications" class="section-space reveal">
             <div class="container">
                 <div class="section-heading text-center">
-                    <span class="section-kicker">Credentials</span>
-                    <h2>Certifications and recognitions</h2>
-                    <p>Click preview to view the certificate in a larger, readable format.</p>
+                    <span class="section-kicker"><i class="fa-solid fa-award"></i> Verified Badges</span>
+                    <h2>Certifications & Competition Achievements</h2>
+                    <p>Click preview to inspect full official credential certificates in high resolution.</p>
                 </div>
 
                 <div class="cert-grid reveal stagger">
                     <article class="cert-card">
-                        <img src="assets/powerBICert.png" alt="Power BI for Beginners certificate" class="cert-thumb">
+                        <img src="assets/powerBICert.png" alt="Power BI Certificate" class="cert-thumb">
                         <div class="cert-body">
                             <div>
                                 <h3>Power BI for Beginners</h3>
                                 <p class="cert-issuer">Simplilearn | SkillUp (Powered by Microsoft)</p>
-                                <p class="cert-date">Issued May 17, 2026</p>
+                                <p class="cert-date"><i class="fa-regular fa-calendar"></i> Issued May 17, 2026</p>
                             </div>
                             <div class="cert-tags">
                                 <span class="cert-tag">Power BI</span>
-                                <span class="cert-tag">Course Completion</span>
+                                <span class="cert-tag">Data Analytics</span>
                                 <span class="cert-tag">Microsoft</span>
                             </div>
-                            <div class="cert-actions">
+                            <div>
                                 <button class="btn btn-main cert-preview" type="button"
-                                    data-cert-title="Power BI for Beginners"
-                                    data-cert-image="assets/powerBICert.png">Preview</button>
+                                    data-cert-title="Power BI for Beginners - Microsoft SkillUp"
+                                    data-cert-image="assets/powerBICert.png">
+                                    <i class="fa-solid fa-eye"></i> Preview
+                                </button>
                             </div>
                         </div>
                     </article>
 
                     <article class="cert-card">
-                        <img src="assets/dataAnalyticsCert.png" alt="Data Analytics Fundamentals certificate"
-                            class="cert-thumb">
+                        <img src="assets/dataAnalyticsCert.png" alt="Data Analytics Certificate" class="cert-thumb">
                         <div class="cert-body">
                             <div>
                                 <h3>Data Analytics Fundamentals</h3>
                                 <p class="cert-issuer">DataSense Analytics</p>
-                                <p class="cert-date">Issued May 15, 2026</p>
+                                <p class="cert-date"><i class="fa-regular fa-calendar"></i> Issued May 15, 2026</p>
                             </div>
                             <div class="cert-tags">
                                 <span class="cert-tag">Data Analytics</span>
-                                <span class="cert-tag">Course Completion</span>
-                                <span class="cert-tag">DataSense</span>
+                                <span class="cert-tag">Visualization</span>
                             </div>
-                            <div class="cert-actions">
+                            <div>
                                 <button class="btn btn-main cert-preview" type="button"
-                                    data-cert-title="Data Analytics Fundamentals"
-                                    data-cert-image="assets/dataAnalyticsCert.png">Preview</button>
+                                    data-cert-title="Data Analytics Fundamentals - DataSense"
+                                    data-cert-image="assets/dataAnalyticsCert.png">
+                                    <i class="fa-solid fa-eye"></i> Preview
+                                </button>
                             </div>
                         </div>
                     </article>
 
                     <article class="cert-card">
-                        <img src="assets/comsocCTF.png" alt="EduCTF 2026 COMSOC Hacking Competition certificate"
-                            class="cert-thumb">
+                        <img src="assets/comsocCTF.png" alt="EduCTF Competition Certificate" class="cert-thumb">
                         <div class="cert-body">
                             <div>
                                 <h3>EduCTF 2026 COMSOC Hacking Competition</h3>
-                                <p class="cert-issuer">Computer Society - ERC</p>
-                                <p class="cert-date">Issued May 3, 2026</p>
+                                <p class="cert-issuer">Computer Society - ERC (6th Place Winner)</p>
+                                <p class="cert-date"><i class="fa-regular fa-calendar"></i> Issued May 3, 2026</p>
                             </div>
                             <div class="cert-tags">
                                 <span class="cert-tag">Cybersecurity</span>
-                                <span class="cert-tag">Competition</span>
-                                <span class="cert-tag">6th Place</span>
+                                <span class="cert-tag">CTF Competition</span>
+                                <span class="cert-tag">Top 6</span>
                             </div>
-                            <div class="cert-actions">
+                            <div>
                                 <button class="btn btn-main cert-preview" type="button"
-                                    data-cert-title="EduCTF 2026 COMSOC Hacking Competition"
-                                    data-cert-image="assets/comsocCTF.png">Preview</button>
+                                    data-cert-title="EduCTF 2026 Hacking Competition - 6th Place"
+                                    data-cert-image="assets/comsocCTF.png">
+                                    <i class="fa-solid fa-eye"></i> Preview
+                                </button>
                             </div>
                         </div>
                     </article>
 
                     <article class="cert-card">
-                        <img src="assets/certificationsNetworking.jpg" alt="Cisco Networking Academy course completion"
+                        <img src="assets/certificationsNetworking.jpg" alt="Cisco Networking Academy Certificate"
                             class="cert-thumb">
                         <div class="cert-body">
                             <div>
                                 <h3>Networking Basics Course Completion</h3>
                                 <p class="cert-issuer">Cisco Networking Academy</p>
-                                <p class="cert-date">Issued Sep 28, 2025</p>
+                                <p class="cert-date"><i class="fa-regular fa-calendar"></i> Issued Sep 28, 2025</p>
                             </div>
                             <div class="cert-tags">
                                 <span class="cert-tag">Networking</span>
-                                <span class="cert-tag">Course Completion</span>
-                                <span class="cert-tag">Cisco</span>
+                                <span class="cert-tag">Cisco Academy</span>
                             </div>
-                            <div class="cert-actions">
+                            <div>
                                 <button class="btn btn-main cert-preview" type="button"
-                                    data-cert-title="Networking Basics Course Completion"
-                                    data-cert-image="assets/certificationsNetworking.jpg">Preview</button>
+                                    data-cert-title="Networking Basics - Cisco Networking Academy"
+                                    data-cert-image="assets/certificationsNetworking.jpg">
+                                    <i class="fa-solid fa-eye"></i> Preview
+                                </button>
                             </div>
                         </div>
                     </article>
 
                     <article class="cert-card">
-                        <img src="assets/ciscoCertification.jpg" alt="Cisco Networking Basics certificate"
-                            class="cert-thumb">
+                        <img src="assets/ciscoCertification.jpg" alt="Cisco DICT Credential" class="cert-thumb">
                         <div class="cert-body">
                             <div>
                                 <h3>Networking Basics Credential</h3>
                                 <p class="cert-issuer">DICT-ITU DTC Initiative</p>
-                                <p class="cert-date">Issued Sep 28, 2025</p>
+                                <p class="cert-date"><i class="fa-regular fa-calendar"></i> Issued Sep 28, 2025</p>
                             </div>
                             <div class="cert-tags">
-                                <span class="cert-tag">Networking</span>
-                                <span class="cert-tag">Student Credential</span>
-                                <span class="cert-tag">Cisco</span>
+                                <span class="cert-tag">DICT-ITU</span>
+                                <span class="cert-tag">Cisco Credential</span>
                             </div>
-                            <div class="cert-actions">
+                            <div>
                                 <button class="btn btn-main cert-preview" type="button"
-                                    data-cert-title="Networking Basics Credential"
-                                    data-cert-image="assets/ciscoCertification.jpg">Preview</button>
+                                    data-cert-title="Networking Basics Credential - DICT-ITU"
+                                    data-cert-image="assets/ciscoCertification.jpg">
+                                    <i class="fa-solid fa-eye"></i> Preview
+                                </button>
                             </div>
                         </div>
                     </article>
-
-
                 </div>
             </div>
         </section>
 
+        <!-- Contact Section -->
         <section id="contact" class="section-space reveal">
             <div class="container">
                 <div class="section-heading text-center">
-                    <span class="section-kicker">Connect</span>
-                    <h2>Get in Touch</h2>
-                    <p>Open to collaborations, project partnerships, and opportunities.</p>
+                    <span class="section-kicker"><i class="fa-solid fa-paper-plane"></i> Get In Touch</span>
+                    <h2>Let's Collaborate</h2>
+                    <p>Open to entry-level opportunities, internships, and tech project collaborations.</p>
                 </div>
 
                 <article class="contact-shell">
                     <div class="row g-4 align-items-center">
                         <div class="col-lg-7">
-                            <h3>Let's work together</h3>
-                            <p>I'm available for internships, project collaborations, and entry-level opportunities in
-                                networking, cybersecurity, and web development.</p>
+                            <h3>Let's build something extraordinary together.</h3>
+                            <p class="mb-4">
+                                I am actively seeking positions in Networking, Cybersecurity engineering, and Frontend
+                                Web Development. Feel free to reach out directly via email or connect with me on
+                                LinkedIn and GitHub.
+                            </p>
+                            <div class="d-flex flex-wrap gap-3">
+                                <button class="btn btn-main" data-copy="dnmrrdnd@gmail.com">
+                                    <i class="fa-solid fa-copy"></i> Copy Email Address
+                                </button>
+                                <a href="mailto:dnmrrdnd@gmail.com" class="btn btn-ghost">
+                                    <i class="fa-solid fa-envelope"></i> Send Direct Email
+                                </a>
+                            </div>
                         </div>
                         <div class="col-lg-5">
                             <ul class="social-list">
-                                <li><a href="https://www.linkedin.com/in/denmar-redondo/" target="_blank"
-                                        rel="noopener noreferrer"><i
-                                            class="fa-brands fa-linkedin"></i><span>LinkedIn</span></a></li>
-                                <li><a href="https://github.com/Denscape" target="_blank" rel="noopener noreferrer"><i
-                                            class="fa-brands fa-github"></i><span>GitHub</span></a></li>
-                                <li><a href="mailto:dnmrrdnd@gmail.com"><i
-                                            class="fa-solid fa-envelope"></i><span>dnmrrdnd@gmail.com</span></a></li>
+                                <li>
+                                    <a href="https://www.linkedin.com/in/denmar-redondo/" target="_blank"
+                                        rel="noopener noreferrer">
+                                        <i class="fa-brands fa-linkedin"></i>
+                                        <span>LinkedIn Profile</span>
+                                        <i
+                                            class="fa-solid fa-arrow-up-right-from-square ms-auto text-xs opacity-50"></i>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="https://github.com/Denscape" target="_blank" rel="noopener noreferrer">
+                                        <i class="fa-brands fa-github"></i>
+                                        <span>GitHub Repositories</span>
+                                        <i
+                                            class="fa-solid fa-arrow-up-right-from-square ms-auto text-xs opacity-50"></i>
+                                    </a>
+                                </li>
+                                <li>
+                                    <button type="button" data-copy="dnmrrdnd@gmail.com">
+                                        <i class="fa-solid fa-envelope"></i>
+                                        <span>dnmrrdnd@gmail.com</span>
+                                        <i class="fa-solid fa-copy ms-auto text-xs opacity-50"></i>
+                                    </button>
+                                </li>
                             </ul>
                         </div>
                     </div>
@@ -477,163 +685,77 @@
             </div>
         </section>
 
+        <!-- Certificate Lightbox Modal -->
         <div class="cert-lightbox" id="certLightbox" aria-hidden="true">
             <div class="cert-lightbox-backdrop" data-cert-close></div>
             <div class="cert-lightbox-panel" role="dialog" aria-modal="true" aria-labelledby="certLightboxTitle">
                 <div class="cert-lightbox-header">
-                    <h5 id="certLightboxTitle">Certificate Preview</h5>
-                    <button type="button" class="btn-close" data-cert-close aria-label="Close"></button>
+                    <h5 id="certLightboxTitle">Certificate Credential Preview</h5>
+                    <button type="button" class="btn-close-lightbox" data-cert-close aria-label="Close modal">
+                        <i class="fa-solid fa-xmark"></i>
+                    </button>
                 </div>
                 <div class="cert-lightbox-body">
                     <img src="" alt="Certificate preview" class="cert-lightbox-image" id="certLightboxImage">
                 </div>
             </div>
         </div>
+
+        <!-- Cyber Terminal Interactive Modal -->
+        <div class="cyber-terminal-modal" id="cyberTerminalModal" aria-hidden="true">
+            <div class="cyber-terminal-backdrop" data-close-terminal></div>
+            <div class="cyber-terminal-box" role="dialog" aria-modal="true">
+                <div class="terminal-header">
+                    <div class="terminal-dots">
+                        <span class="dot dot-red" data-close-terminal title="Close terminal"></span>
+                        <span class="dot dot-yellow"></span>
+                        <span class="dot dot-green"></span>
+                    </div>
+                    <span class="terminal-title">visitor@denscape-cli ~ (bash)</span>
+                    <span class="text-xs text-muted">Press ESC to exit</span>
+                </div>
+                <div class="terminal-body" id="terminalOutput">
+                    <p style="color:var(--primary); font-weight:700;">Denscape Interactive Cyber Terminal v2.0</p>
+                    <p style="color:var(--muted);">Type '<span style="color:var(--primary);">help</span>' or click a
+                        command below:</p>
+                    <div class="terminal-quick-chips my-2 d-flex flex-wrap gap-1">
+                        <button class="term-chip" data-term-cmd="whoami">whoami</button>
+                        <button class="term-chip" data-term-cmd="skills">skills</button>
+                        <button class="term-chip" data-term-cmd="projects">projects</button>
+                        <button class="term-chip" data-term-cmd="certs">certs</button>
+                        <button class="term-chip" data-term-cmd="contact">contact</button>
+                        <button class="term-chip" data-term-cmd="clear">clear</button>
+                    </div>
+                </div>
+                <div class="px-3 pb-3">
+                    <div class="terminal-prompt-line">
+                        <span class="prompt-symbol">visitor@denscape:~$</span>
+                        <input type="text" id="terminalInput" class="terminal-input"
+                            placeholder="Type a command (e.g. help, whoami, skills, projects)..." autocomplete="off"
+                            spellcheck="false">
+                    </div>
+                </div>
+            </div>
+        </div>
     </main>
 
+    <!-- Footer -->
     <footer class="site-footer">
-        <div class="container d-flex flex-column flex-md-row justify-content-between align-items-center gap-2">
-            <p class="mb-0">© 2025 Denmar Redondo</p>
-            <p class="mb-0">Designed with discipline, curiosity, and creative engineering.</p>
+        <div class="container d-flex flex-column flex-md-row justify-content-between align-items-center gap-3">
+            <div class="d-flex align-items-center gap-2">
+                <p class="mb-0 text-sm">© 2026 Denmar Redondo. All rights reserved.</p>
+            </div>
+            <p class="mb-0 text-sm" style="color:var(--muted);">
+                Engineered with precision, security focus, and modern design standards.
+            </p>
         </div>
     </footer>
 
+    <!-- Bootstrap Bundle JS & Custom App Script -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
         crossorigin="anonymous"></script>
-    <script>
-        window.addEventListener('DOMContentLoaded', function () {
-            var navLinks = Array.from(document.querySelectorAll('.navbar .nav-link[href^="#"]'));
-            var navbarMenu = document.getElementById('primaryNavbar');
-            var revealItems = Array.from(document.querySelectorAll('.reveal'));
-
-            if (!navLinks.length) {
-                return;
-            }
-
-            function setActive(link) {
-                navLinks.forEach(function (item) {
-                    item.classList.remove('active');
-                    item.removeAttribute('aria-current');
-                });
-
-                if (link) {
-                    link.classList.add('active');
-                    link.setAttribute('aria-current', 'page');
-                }
-            }
-
-            navLinks.forEach(function (link) {
-                link.addEventListener('click', function () {
-                    setActive(link);
-
-                    if (window.innerWidth < 992 && window.bootstrap && navbarMenu) {
-                        bootstrap.Collapse.getOrCreateInstance(navbarMenu, { toggle: false }).hide();
-                    }
-                });
-            });
-
-            var sectionMap = navLinks
-                .map(function (link) {
-                    var section = document.querySelector(link.getAttribute('href'));
-                    return section ? { link: link, section: section } : null;
-                })
-                .filter(Boolean);
-
-            if ('IntersectionObserver' in window && sectionMap.length) {
-                var navObserver = new IntersectionObserver(function (entries) {
-                    var visible = entries
-                        .filter(function (entry) {
-                            return entry.isIntersecting;
-                        })
-                        .sort(function (a, b) {
-                            return b.intersectionRatio - a.intersectionRatio;
-                        });
-
-                    if (visible.length) {
-                        var current = sectionMap.find(function (item) {
-                            return item.section === visible[0].target;
-                        });
-                        setActive(current && current.link);
-                    }
-                }, {
-                    root: null,
-                    threshold: 0.45,
-                    rootMargin: '-8% 0px -38% 0px'
-                });
-
-                sectionMap.forEach(function (item) {
-                    navObserver.observe(item.section);
-                });
-
-                if (revealItems.length) {
-                    var revealObserver = new IntersectionObserver(function (entries, observer) {
-                        entries.forEach(function (entry) {
-                            if (entry.isIntersecting) {
-                                entry.target.classList.add('is-visible');
-                                observer.unobserve(entry.target);
-                            }
-                        });
-                    }, {
-                        threshold: 0.2,
-                        rootMargin: '0px 0px -10% 0px'
-                    });
-
-                    revealItems.forEach(function (item) {
-                        revealObserver.observe(item);
-                    });
-                }
-            }
-
-            var lightbox = document.getElementById('certLightbox');
-            var lightboxTitle = document.getElementById('certLightboxTitle');
-            var lightboxImage = document.getElementById('certLightboxImage');
-
-            function openLightbox(title, imageSrc) {
-                if (!lightbox || !lightboxTitle || !lightboxImage) {
-                    return;
-                }
-
-                lightboxTitle.textContent = title;
-                lightboxImage.src = imageSrc;
-                lightbox.classList.add('is-active');
-                lightbox.setAttribute('aria-hidden', 'false');
-                document.body.classList.add('lightbox-open');
-            }
-
-            function closeLightbox() {
-                if (!lightbox) {
-                    return;
-                }
-
-                lightbox.classList.remove('is-active');
-                lightbox.setAttribute('aria-hidden', 'true');
-                document.body.classList.remove('lightbox-open');
-            }
-
-            document.querySelectorAll('.cert-preview').forEach(function (button) {
-                button.addEventListener('click', function () {
-                    openLightbox(button.dataset.certTitle, button.dataset.certImage);
-                });
-            });
-
-            document.querySelectorAll('[data-cert-close]').forEach(function (button) {
-                button.addEventListener('click', closeLightbox);
-            });
-
-            document.addEventListener('keydown', function (event) {
-                if (event.key === 'Escape') {
-                    closeLightbox();
-                }
-            });
-
-            var initialLink = navLinks.find(function (item) {
-                return item.getAttribute('href') === (window.location.hash || '#home');
-            }) || navLinks[0];
-
-            setActive(initialLink);
-        });
-    </script>
+    <script src="js/app.js"></script>
 </body>
 
 </html>
