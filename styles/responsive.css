@@ -1,27 +1,57 @@
+/* Comprehensive Responsive Media Queries */
+
+/* Large / Ultrawide Displays (1400px+) */
+@media (min-width: 1400px) {
+    .container {
+        max-width: 1280px;
+    }
+}
+
+/* Medium-Large Devices (992px - 1199px) */
+@media (max-width: 1199.98px) {
+    .hero-title {
+        font-size: clamp(2.1rem, 4.5vw, 3.4rem);
+    }
+}
+
+/* Tablets & Small Laptops (max-width: 991.98px) */
 @media (max-width: 991.98px) {
     .hero-section {
-        padding-top: 4.5rem;
+        padding: 4rem 0 2.5rem;
+    }
+
+    .hero-title {
+        max-width: 100%;
+        font-size: clamp(2rem, 6vw, 3.2rem);
+    }
+
+    .hero-subtitle {
+        max-width: 100%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .profile-panel {
+        width: min(20rem, 100%);
+        margin-top: 1rem;
     }
 
     .skills-grid {
-        grid-template-columns: 1fr;
+        grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
     }
 
     .navbar-collapse {
         margin-top: 0.8rem;
         border-top: 1px solid var(--line);
         padding-top: 0.85rem;
+        background: rgba(9, 13, 22, 0.95);
+        border-radius: 0.5rem;
+        padding: 1rem;
     }
 
     .navbar .nav-link {
-        padding: 0.5rem 0;
-        border-radius: 0;
-    }
-
-    .navbar .nav-link.active {
-        background: transparent;
-        color: var(--primary);
-        box-shadow: none;
+        padding: 0.5rem 0.75rem;
+        border-radius: 0.4rem;
     }
 
     .btn-terminal-nav {
@@ -32,22 +62,63 @@
 
     .stats-strip {
         grid-template-columns: repeat(2, 1fr);
+        gap: 1.25rem;
     }
 }
 
+/* Mobile Devices & Small Tablets (max-width: 767.98px) */
 @media (max-width: 767.98px) {
+    .section-space {
+        padding: 4.5rem 0;
+    }
+
+    .hero-role {
+        font-size: 0.82rem;
+        padding: 0.3rem 0.75rem;
+    }
+
+    .hero-cta {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .hero-cta .btn {
+        width: 100%;
+    }
+
     .portfolio-controls {
         flex-direction: column;
         align-items: stretch;
+        gap: 0.85rem;
+    }
+
+    .filter-pills {
+        justify-content: center;
+    }
+
+    .filter-btn {
+        flex: 1 1 auto;
+        text-align: center;
+        padding: 0.38rem 0.75rem;
+        font-size: 0.8rem;
     }
 
     .search-box {
         width: 100%;
     }
 
+    .project-image-wrapper {
+        height: 190px;
+    }
+
+    .cert-grid {
+        grid-template-columns: 1fr;
+    }
+
     .cert-card {
         flex-direction: column;
         align-items: flex-start;
+        gap: 0.85rem;
     }
 
     .cert-thumb {
@@ -55,28 +126,84 @@
         height: 160px;
     }
 
+    .cert-preview {
+        width: 100%;
+    }
+
     .contact-shell {
-        padding: 1.8rem 1.25rem;
+        padding: 1.6rem 1.1rem;
+    }
+
+    .social-list li a,
+    .social-list li button {
+        font-size: 0.85rem;
+        padding: 0.65rem 0.85rem;
+    }
+
+    .back-to-top {
+        left: 1rem;
+        bottom: 1rem;
+        width: 38px;
+        height: 38px;
+        font-size: 0.85rem;
+    }
+
+    .toast-container {
+        right: 1rem;
+        left: 1rem;
+        bottom: 1rem;
+    }
+
+    .toast-message {
+        width: 100%;
+        justify-content: center;
     }
 }
 
-@media (max-width: 575.98px) {
-    .section-space {
-        padding: 4rem 0;
+/* Extra Small Phones (max-width: 480px / 360px) */
+@media (max-width: 480px) {
+    .container {
+        padding-left: 0.85rem;
+        padding-right: 0.85rem;
+    }
+
+    .section-heading h2 {
+        font-size: 1.6rem;
     }
 
     .hero-title {
-        font-size: clamp(2rem, 8vw, 2.8rem);
-        max-width: 100%;
+        font-size: clamp(1.75rem, 7.5vw, 2.3rem);
+    }
+
+    .hero-subtitle {
+        font-size: 0.95rem;
     }
 
     .stats-strip {
         grid-template-columns: 1fr 1fr;
-        gap: 1rem;
-        padding: 1.2rem 1rem;
+        gap: 0.85rem;
+        padding: 1rem 0.85rem;
+    }
+
+    .stat-number {
+        font-size: 1.35rem;
+    }
+
+    .stat-label {
+        font-size: 0.7rem;
     }
 
     .cyber-terminal-box {
-        height: 85vh;
+        width: 95%;
+        height: 82vh;
+    }
+
+    .terminal-body {
+        padding: 0.85rem;
+        font-size: 0.8rem;
+    }
+
+    .terminal-input {
+        font-size: 0.8rem;
     }
 }

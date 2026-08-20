@@ -9,14 +9,14 @@
     --muted-dark: #64748b;
     --line: rgba(255, 255, 255, 0.08);
     --line-active: rgba(59, 130, 246, 0.5);
-    
+
     --primary: #3b82f6;
     --primary-hover: #2563eb;
     --primary-soft: rgba(59, 130, 246, 0.1);
-    
+
     --shadow-soft: 0 4px 20px rgba(0, 0, 0, 0.3);
     --shadow-hard: 0 10px 30px rgba(0, 0, 0, 0.5);
-    
+
     --font-sans: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
     --font-mono: 'Fira Code', 'JetBrains Mono', Consolas, monospace;
 }
@@ -37,7 +37,6 @@ body {
     overflow-x: hidden;
 }
 
-/* Custom Minimal Scrollbar */
 ::-webkit-scrollbar {
     width: 8px;
 }
@@ -60,7 +59,12 @@ body {
     color: #ffffff;
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
     font-family: var(--font-sans);
     font-weight: 700;
     color: #ffffff;
@@ -75,4 +79,9 @@ p {
 a {
     color: inherit;
     text-decoration: none;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
 }
