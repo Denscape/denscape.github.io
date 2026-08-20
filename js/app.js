@@ -1,36 +1,13 @@
-/**
- * Denscape Portfolio - Interactive Application Script
- */
-
 document.addEventListener('DOMContentLoaded', async function () {
-    // 0. Async Component Loader
     await loadComponents();
-
-    // 1. Navigation & Scroll Spy
     initNavigation();
-
-    // 2. Scroll Reveal Animations
     initScrollReveal();
-
-    // 3. Stats Metric Counter Animation
     initCounterAnimation();
-
-    // 4. Portfolio Filter & Live Search
     initPortfolioFilters();
-
-    // 5. Certificate Lightbox
     initCertLightbox();
-
-    // 6. Interactive Cyber Terminal
     initCyberTerminal();
-
-    // 7. Toast & Copy Email Utility
     initCopyUtilities();
 });
-
-/* ----------------------------------------------------
- * 0. Async Component Loader
- * ---------------------------------------------------- */
 async function loadComponents() {
     const components = [
         { id: 'header-root', file: 'components/header.html' },
@@ -60,9 +37,6 @@ async function loadComponents() {
     }
 }
 
-/* ----------------------------------------------------
- * 1. Navigation & Scroll Spy
- * ---------------------------------------------------- */
 function initNavigation() {
     const navLinks = Array.from(document.querySelectorAll('.navbar .nav-link[href^="#"]'));
     const navbarMenu = document.getElementById('primaryNavbar');
@@ -102,9 +76,6 @@ function initNavigation() {
     }
 }
 
-/* ----------------------------------------------------
- * 2. Scroll Reveal Observer
- * ---------------------------------------------------- */
 function initScrollReveal() {
     const revealItems = document.querySelectorAll('.reveal');
     if (!revealItems.length) return;
@@ -125,9 +96,6 @@ function initScrollReveal() {
     }
 }
 
-/* ----------------------------------------------------
- * 3. Animated Metric Counter
- * ---------------------------------------------------- */
 function initCounterAnimation() {
     const counters = document.querySelectorAll('.stat-number[data-target]');
     if (!counters.length) return;
@@ -168,9 +136,6 @@ function initCounterAnimation() {
     if (statsStrip) observer.observe(statsStrip);
 }
 
-/* ----------------------------------------------------
- * 4. Portfolio Filters & Search
- * ---------------------------------------------------- */
 function initPortfolioFilters() {
     const filterBtns = document.querySelectorAll('.filter-btn');
     const searchInput = document.getElementById('projectSearchInput');
@@ -222,9 +187,6 @@ function initPortfolioFilters() {
     }
 }
 
-/* ----------------------------------------------------
- * 5. Certificate Lightbox
- * ---------------------------------------------------- */
 function initCertLightbox() {
     const lightbox = document.getElementById('certLightbox');
     const lightboxTitle = document.getElementById('certLightboxTitle');
@@ -262,10 +224,6 @@ function initCertLightbox() {
         }
     });
 }
-
-/* ----------------------------------------------------
- * 6. Cyber Terminal Interactive Modal
- * ---------------------------------------------------- */
 function initCyberTerminal() {
     const terminalModal = document.getElementById('cyberTerminalModal');
     const terminalOpenBtns = document.querySelectorAll('[data-open-terminal]');
@@ -295,7 +253,6 @@ function initCyberTerminal() {
         if (e.key === 'Escape' && terminalModal.classList.contains('is-active')) {
             closeTerminal();
         }
-        // Shortcut: Ctrl+K or Cmd+K
         if ((e.ctrlKey || e.metaKey) && e.key === 'k') {
             e.preventDefault();
             if (terminalModal.classList.contains('is-active')) closeTerminal();
@@ -339,7 +296,6 @@ LinkedIn: linkedin.com/in/denmar-redondo
 GitHub:   github.com/Denscape`
     };
 
-    // Quick chip click commands
     document.querySelectorAll('[data-term-cmd]').forEach(chip => {
         chip.addEventListener('click', () => {
             const cmd = chip.getAttribute('data-term-cmd');
@@ -391,9 +347,6 @@ GitHub:   github.com/Denscape`
     }
 }
 
-/* ----------------------------------------------------
- * 7. Toast & Copy Utilities
- * ---------------------------------------------------- */
 function initCopyUtilities() {
     const copyBtns = document.querySelectorAll('[data-copy]');
 
