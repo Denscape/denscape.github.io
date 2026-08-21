@@ -9,18 +9,36 @@ main,
 }
 
 .site-header {
-    position: sticky;
-    top: 0;
-    z-index: 1030;
-    backdrop-filter: blur(12px);
-    -webkit-backdrop-filter: blur(12px);
-    background: rgba(9, 13, 22, 0.85);
-    border-bottom: 1px solid var(--line);
-    transition: background 0.2s ease, border-color 0.2s ease;
+    position: fixed !important;
+    top: 0 !important;
+    left: 0;
+    right: 0;
+    z-index: 1030 !important;
+    padding: 1rem 0 0.5rem;
+    backdrop-filter: blur(18px);
+    -webkit-backdrop-filter: blur(18px);
+    background: rgba(8, 11, 18, 0.62);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+    transition: background 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+}
+
+.site-header::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(180deg, rgba(17, 24, 39, 0.88), rgba(17, 24, 39, 0.26));
+    z-index: -1;
 }
 
 .pro-navbar {
-    padding: 0.85rem 0;
+    position: relative;
+    padding: 0.9rem 1.2rem;
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    border-radius: 1.1rem;
+    background: rgba(12, 16, 25, 0.48);
+    box-shadow: 0 12px 30px rgba(2, 6, 23, 0.24);
+    backdrop-filter: blur(14px);
+    -webkit-backdrop-filter: blur(14px);
 }
 
 .brand-mark {
