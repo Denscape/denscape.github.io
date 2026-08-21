@@ -72,6 +72,44 @@
         padding: 4.5rem 0;
     }
 
+    .cyber-terminal-box {
+        width: min(94vw, 720px);
+        height: min(78vh, 460px);
+        max-height: 78vh;
+    }
+
+    .terminal-header {
+        padding: 0.55rem 0.75rem;
+        gap: 0.45rem;
+        flex-wrap: wrap;
+        align-items: center;
+    }
+
+    .terminal-title {
+        font-size: 0.72rem;
+        line-height: 1.4;
+        white-space: normal;
+        word-break: break-word;
+        flex: 1 1 100%;
+        order: 2;
+    }
+
+    .terminal-header .text-xs {
+        flex: 1 1 100%;
+        order: 3;
+        text-align: right;
+        white-space: nowrap;
+    }
+
+    .terminal-body {
+        padding: 0.8rem;
+        font-size: clamp(0.75rem, 2vw, 0.8rem);
+    }
+
+    .terminal-input {
+        font-size: clamp(0.75rem, 2vw, 0.8rem);
+    }
+
     .hero-role {
         font-size: 0.82rem;
         padding: 0.3rem 0.75rem;
@@ -165,6 +203,52 @@
     .container {
         padding-left: 0.85rem;
         padding-right: 0.85rem;
+    }
+
+    .cyber-terminal-box {
+        width: 96%;
+        height: 75vh;
+        border-radius: 0.75rem;
+    }
+
+    .terminal-header {
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: center;
+    }
+
+    .terminal-title {
+        width: 100%;
+        font-size: 0.7rem;
+        overflow-wrap: anywhere;
+        flex: 1 1 auto;
+        order: 2;
+    }
+
+    .terminal-header .text-xs {
+        text-align: left;
+        order: 3;
+    }
+
+    .terminal-body {
+        padding: 0.7rem;
+        font-size: 0.75rem;
+    }
+
+    .terminal-prompt-line {
+        align-items: flex-start;
+        gap: 0.35rem;
+        flex-wrap: wrap;
+    }
+
+    .prompt-symbol {
+        white-space: nowrap;
+    }
+
+    .terminal-input {
+        min-width: 0;
+        width: 100%;
+        font-size: 0.75rem;
     }
 
     .section-heading h2 {
