@@ -7,6 +7,9 @@ document.addEventListener('DOMContentLoaded', async function () {
     initCertLightbox();
     initCyberTerminal();
     initCopyUtilities();
+    if (typeof initGuidedTour === 'function') {
+        initGuidedTour();
+    }
 });
 async function loadComponents() {
     const components = [
