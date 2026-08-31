@@ -1,87 +1,98 @@
 body.christmas-theme {
-    --bg-base: #0a110d; /* Very dark green */
+    --bg-base: #0a110d;
     --bg-alt: #0f1a14;
     --surface: #14241b;
     --surface-hover: #1b3024;
     --surface-strong: #172a1f;
-    --ink: #fdfbf7; /* Warm white */
+    --ink: #fdfbf7;
     --muted: #a3b8ad;
     --muted-dark: #6e8277;
     --line: rgba(255, 255, 255, 0.08);
-    --line-active: rgba(220, 38, 38, 0.5); /* Red line */
+    --line-active: rgba(248, 250, 252, 0.5);
 
-    --primary: #dc2626; /* Christmas red */
-    --primary-hover: #b91c1c;
-    --primary-soft: rgba(220, 38, 38, 0.15);
+    --primary: #f8fafc;
+    --primary-hover: #e2e8f0;
+    --primary-soft: rgba(248, 250, 252, 0.15);
 }
 
-/* Global Transitions for smooth toggle */
-body, 
-body .navbar, 
-body .skill-category, 
-body .portfolio-item, 
-body .profile-panel, 
+body,
+body .navbar,
+body .skill-category,
+body .portfolio-item,
+body .profile-panel,
 body .btn {
     transition: background-color 0.6s ease, border-color 0.6s ease, box-shadow 0.6s ease, color 0.6s ease;
 }
 
-/* Glassmorphism & Resting Snow */
 body.christmas-theme .navbar,
 body.christmas-theme .skill-category,
 body.christmas-theme .portfolio-item,
 body.christmas-theme .profile-panel {
-    background: rgba(20, 36, 27, 0.7); /* semi-transparent green */
+    background: rgba(20, 36, 27, 0.7);
     backdrop-filter: blur(12px);
     -webkit-backdrop-filter: blur(12px);
-    border: 1px solid rgba(255,255,255,0.05);
-    border-top: 2px solid rgba(255,255,255,0.6); /* Resting snow effect */
-    box-shadow: 0 -4px 15px rgba(255,255,255,0.05), 0 8px 32px rgba(0,0,0,0.5);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    border-top: 2px solid rgba(255, 255, 255, 0.6);
+    box-shadow: 0 -4px 15px rgba(255, 255, 255, 0.05), 0 8px 32px rgba(0, 0, 0, 0.5);
     border-radius: 12px;
 }
 
-/* Adjust navbar border for snow */
 body.christmas-theme .navbar {
-    border-bottom: 2px solid #dc2626;
-    border-top: none; /* No snow on top of navbar since it sticks to top */
+    border-bottom: 2px solid #f8fafc;
+    border-top: none;
 }
 
-/* Jingle Animation on Buttons */
 @keyframes jingle {
-    0% { transform: rotate(0deg); }
-    25% { transform: rotate(5deg); }
-    50% { transform: rotate(-5deg); }
-    75% { transform: rotate(3deg); }
-    100% { transform: rotate(0deg); }
+    0% {
+        transform: rotate(0deg);
+    }
+
+    25% {
+        transform: rotate(5deg);
+    }
+
+    50% {
+        transform: rotate(-5deg);
+    }
+
+    75% {
+        transform: rotate(3deg);
+    }
+
+    100% {
+        transform: rotate(0deg);
+    }
 }
 
 body.christmas-theme .btn-primary,
 body.christmas-theme .btn-main {
-    background: #dc2626;
-    border-color: #dc2626;
+    background: #f8fafc;
+    border-color: #f8fafc;
+    color: #0a110d;
+    font-weight: 700;
 }
 
 body.christmas-theme .btn-primary:hover,
 body.christmas-theme .btn-main:hover {
-    background: #b91c1c;
-    border-color: #b91c1c;
+    background: #e2e8f0;
+    border-color: #e2e8f0;
+    color: #0a110d;
     animation: jingle 0.4s ease-in-out;
-    box-shadow: 0 0 15px rgba(220, 38, 38, 0.6);
+    box-shadow: 0 0 20px rgba(248, 250, 252, 0.8);
 }
 
-/* Glowing Highlights */
-body.christmas-theme h1, 
+body.christmas-theme h1,
 body.christmas-theme h2 {
-    text-shadow: 0 0 12px rgba(220, 38, 38, 0.4);
+    text-shadow: 0 0 12px rgba(248, 250, 252, 0.4);
 }
 
-/* Fairy Lights */
 .fairy-lights-container {
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     height: 12px;
-    z-index: 1050; /* Above navbar */
+    z-index: 1050;
     display: flex;
     justify-content: space-around;
     pointer-events: none;
@@ -93,7 +104,7 @@ body.christmas-theme h2 {
     border-radius: 50% 50% 50% 50% / 60% 60% 40% 40%;
     background: #fff;
     animation: twinkle 1.5s infinite alternate;
-    margin-top: -2px; /* Hang slightly off top */
+    margin-top: -2px;
 }
 
 .fairy-light::before {
@@ -106,17 +117,41 @@ body.christmas-theme h2 {
     background: #222;
 }
 
-.fairy-light:nth-child(4n+1) { background: #ff4444; box-shadow: 0 5px 15px 2px rgba(255, 68, 68, 0.8); animation-delay: 0s; }
-.fairy-light:nth-child(4n+2) { background: #44ff44; box-shadow: 0 5px 15px 2px rgba(68, 255, 68, 0.8); animation-delay: 0.3s; }
-.fairy-light:nth-child(4n+3) { background: #4444ff; box-shadow: 0 5px 15px 2px rgba(68, 68, 255, 0.8); animation-delay: 0.6s; }
-.fairy-light:nth-child(4n+4) { background: #ffff44; box-shadow: 0 5px 15px 2px rgba(255, 255, 68, 0.8); animation-delay: 0.9s; }
-
-@keyframes twinkle {
-    0% { opacity: 0.4; }
-    100% { opacity: 1; transform: scale(1.1); }
+.fairy-light:nth-child(4n+1) {
+    background: #ff4444;
+    box-shadow: 0 5px 15px 2px rgba(255, 68, 68, 0.8);
+    animation-delay: 0s;
 }
 
-/* Magic Cursor Trail */
+.fairy-light:nth-child(4n+2) {
+    background: #44ff44;
+    box-shadow: 0 5px 15px 2px rgba(68, 255, 68, 0.8);
+    animation-delay: 0.3s;
+}
+
+.fairy-light:nth-child(4n+3) {
+    background: #4444ff;
+    box-shadow: 0 5px 15px 2px rgba(68, 68, 255, 0.8);
+    animation-delay: 0.6s;
+}
+
+.fairy-light:nth-child(4n+4) {
+    background: #ffff44;
+    box-shadow: 0 5px 15px 2px rgba(255, 255, 68, 0.8);
+    animation-delay: 0.9s;
+}
+
+@keyframes twinkle {
+    0% {
+        opacity: 0.4;
+    }
+
+    100% {
+        opacity: 1;
+        transform: scale(1.1);
+    }
+}
+
 .magic-trail {
     position: fixed;
     width: 8px;
@@ -130,11 +165,17 @@ body.christmas-theme h2 {
 }
 
 @keyframes magic-fade {
-    0% { opacity: 1; transform: scale(1); }
-    100% { opacity: 0; transform: scale(0.2); }
+    0% {
+        opacity: 1;
+        transform: scale(1);
+    }
+
+    100% {
+        opacity: 0;
+        transform: scale(0.2);
+    }
 }
 
-/* Snowflake animations */
 .snowflake {
     color: #fff;
     font-size: 1em;
@@ -153,13 +194,13 @@ body.christmas-theme h2 {
         transform: translateY(-10vh) rotate(0deg);
         opacity: 1;
     }
+
     100% {
         transform: translateY(110vh) rotate(360deg);
         opacity: 0.3;
     }
 }
 
-/* The sticky chatbot-like button */
 .christmas-toggle-btn {
     position: fixed;
     bottom: 90px;
@@ -177,7 +218,7 @@ body.christmas-theme h2 {
     box-shadow: 0 4px 12px rgba(220, 38, 38, 0.4);
     z-index: 9998;
     transition: all 0.3s ease;
-    border: 2px solid rgba(255,255,255,0.2);
+    border: 2px solid rgba(255, 255, 255, 0.2);
 }
 
 .christmas-toggle-btn:hover {
@@ -186,9 +227,20 @@ body.christmas-theme h2 {
 }
 
 body.christmas-theme .christmas-toggle-btn {
-    background-color: #059669; 
+    background-color: #059669;
     box-shadow: 0 4px 12px rgba(5, 150, 105, 0.4);
 }
+
 body.christmas-theme .christmas-toggle-btn:hover {
     box-shadow: 0 6px 16px rgba(5, 150, 105, 0.6);
+}
+
+@media (max-width: 768px) {
+    .christmas-toggle-btn {
+        width: 45px;
+        height: 45px;
+        font-size: 18px;
+        bottom: 75px;
+        right: 15px;
+    }
 }

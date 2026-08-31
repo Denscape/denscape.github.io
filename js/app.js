@@ -440,7 +440,7 @@ function initChristmasTheme() {
         snowflake.style.animationDuration = Math.random() * 3 + 2 + 's';
         snowflake.style.opacity = Math.random();
         snowflake.style.fontSize = (Math.random() * 10 + 10) + 'px';
-        
+
         document.body.appendChild(snowflake);
         snowflakes.push(snowflake);
 
@@ -451,10 +451,17 @@ function initChristmasTheme() {
     }
 
     function toggleWinterWonderland(active) {
+        const profileImg = document.querySelector('.profile-photo');
         if (active) {
+            // Swap profile image
+            if (profileImg) {
+                profileImg.dataset.originalSrc = profileImg.src;
+                profileImg.src = 'assets/christmasThemeProfile.jpg';
+            }
+
             // Start snow
             animationInterval = setInterval(createSnowflake, 200);
-            
+
             // Add Fairy Lights
             fairyLightsContainer = document.createElement('div');
             fairyLightsContainer.className = 'fairy-lights-container';
@@ -468,11 +475,16 @@ function initChristmasTheme() {
             // Enable Magic Cursor
             magicCursorActive = true;
         } else {
+            // Restore profile image
+            if (profileImg && profileImg.dataset.originalSrc) {
+                profileImg.src = profileImg.dataset.originalSrc;
+            }
+
             // Stop snow
             clearInterval(animationInterval);
             snowflakes.forEach(s => s.remove());
             snowflakes = [];
-            
+
             // Remove Fairy Lights
             if (fairyLightsContainer) {
                 fairyLightsContainer.remove();
@@ -487,7 +499,7 @@ function initChristmasTheme() {
     // Magic Cursor effect
     document.addEventListener('mousemove', (e) => {
         if (!magicCursorActive) return;
-        
+
         // Spawn a trail dot occasionally to save performance
         if (Math.random() > 0.4) {
             const trail = document.createElement('div');
@@ -495,7 +507,7 @@ function initChristmasTheme() {
             trail.style.left = (e.clientX - 4) + 'px';
             trail.style.top = (e.clientY - 4) + 'px';
             document.body.appendChild(trail);
-            
+
             setTimeout(() => {
                 trail.remove();
             }, 500);
