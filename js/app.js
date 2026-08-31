@@ -7,6 +7,7 @@ document.addEventListener('DOMContentLoaded', async function () {
     initCertLightbox();
     initCyberTerminal();
     initCopyUtilities();
+    initChristmasTheme();
     if (typeof initGuidedTour === 'function') {
         initGuidedTour();
     }
@@ -414,3 +415,104 @@ function showToast(message) {
         setTimeout(() => toast.remove(), 300);
     }, 3000);
 }
+
+function initChristmasTheme() {
+    let btn = document.getElementById('christmasToggleBtn');
+    if (!btn) {
+        btn = document.createElement('button');
+        btn.id = 'christmasToggleBtn';
+        btn.className = 'christmas-toggle-btn';
+        btn.setAttribute('aria-label', 'Toggle Christmas Theme');
+        btn.innerHTML = '<i class="fa-solid fa-tree"></i>';
+        document.body.appendChild(btn);
+    }
+
+    let snowflakes = [];
+    let fairyLightsContainer = null;
+    let animationInterval = null;
+    let magicCursorActive = false;
+
+    function createSnowflake() {
+        const snowflake = document.createElement('div');
+        snowflake.className = 'snowflake';
+        snowflake.innerHTML = '&#10052;'; // snowflake character
+        snowflake.style.left = Math.random() * 100 + 'vw';
+        snowflake.style.animationDuration = Math.random() * 3 + 2 + 's';
+        snowflake.style.opacity = Math.random();
+        snowflake.style.fontSize = (Math.random() * 10 + 10) + 'px';
+        
+        document.body.appendChild(snowflake);
+        snowflakes.push(snowflake);
+
+        setTimeout(() => {
+            snowflake.remove();
+            snowflakes = snowflakes.filter(s => s !== snowflake);
+        }, 5000);
+    }
+
+    function toggleWinterWonderland(active) {
+        if (active) {
+            // Start snow
+            animationInterval = setInterval(createSnowflake, 200);
+            
+            // Add Fairy Lights
+            fairyLightsContainer = document.createElement('div');
+            fairyLightsContainer.className = 'fairy-lights-container';
+            for (let i = 0; i < 40; i++) {
+                const light = document.createElement('div');
+                light.className = 'fairy-light';
+                fairyLightsContainer.appendChild(light);
+            }
+            document.body.appendChild(fairyLightsContainer);
+
+            // Enable Magic Cursor
+            magicCursorActive = true;
+        } else {
+            // Stop snow
+            clearInterval(animationInterval);
+            snowflakes.forEach(s => s.remove());
+            snowflakes = [];
+            
+            // Remove Fairy Lights
+            if (fairyLightsContainer) {
+                fairyLightsContainer.remove();
+                fairyLightsContainer = null;
+            }
+
+            // Disable Magic Cursor
+            magicCursorActive = false;
+        }
+    }
+
+    // Magic Cursor effect
+    document.addEventListener('mousemove', (e) => {
+        if (!magicCursorActive) return;
+        
+        // Spawn a trail dot occasionally to save performance
+        if (Math.random() > 0.4) {
+            const trail = document.createElement('div');
+            trail.className = 'magic-trail';
+            trail.style.left = (e.clientX - 4) + 'px';
+            trail.style.top = (e.clientY - 4) + 'px';
+            document.body.appendChild(trail);
+            
+            setTimeout(() => {
+                trail.remove();
+            }, 500);
+        }
+    });
+
+    btn.addEventListener('click', () => {
+        const isChristmas = document.body.classList.toggle('christmas-theme');
+        if (isChristmas) {
+            btn.innerHTML = '<i class="fa-solid fa-gift"></i>';
+            showToast('Winter Wonderland activated!');
+            toggleWinterWonderland(true);
+        } else {
+            btn.innerHTML = '<i class="fa-solid fa-tree"></i>';
+            showToast('Winter Wonderland deactivated.');
+            toggleWinterWonderland(false);
+        }
+    });
+}
+
