@@ -8,6 +8,7 @@ document.addEventListener('DOMContentLoaded', async function () {
     initCyberTerminal();
     initCopyUtilities();
     initChristmasTheme();
+    initViewCounter();
     if (typeof initGuidedTour === 'function') {
         initGuidedTour();
     }
@@ -435,7 +436,7 @@ function initChristmasTheme() {
     function createSnowflake() {
         const snowflake = document.createElement('div');
         snowflake.className = 'snowflake';
-        snowflake.innerHTML = '&#10052;'; // snowflake character
+        snowflake.innerHTML = '&#10052;';
         snowflake.style.left = Math.random() * 100 + 'vw';
         snowflake.style.animationDuration = Math.random() * 3 + 2 + 's';
         snowflake.style.opacity = Math.random();
@@ -453,16 +454,12 @@ function initChristmasTheme() {
     function toggleWinterWonderland(active) {
         const profileImg = document.querySelector('.profile-photo');
         if (active) {
-            // Swap profile image
             if (profileImg) {
                 profileImg.dataset.originalSrc = profileImg.src;
                 profileImg.src = 'assets/christmasThemeProfile.jpg';
             }
-
-            // Start snow
             animationInterval = setInterval(createSnowflake, 200);
 
-            // Add Fairy Lights
             fairyLightsContainer = document.createElement('div');
             fairyLightsContainer.className = 'fairy-lights-container';
             for (let i = 0; i < 40; i++) {
@@ -472,35 +469,24 @@ function initChristmasTheme() {
             }
             document.body.appendChild(fairyLightsContainer);
 
-            // Enable Magic Cursor
             magicCursorActive = true;
         } else {
-            // Restore profile image
             if (profileImg && profileImg.dataset.originalSrc) {
                 profileImg.src = profileImg.dataset.originalSrc;
             }
-
-            // Stop snow
             clearInterval(animationInterval);
             snowflakes.forEach(s => s.remove());
             snowflakes = [];
-
-            // Remove Fairy Lights
             if (fairyLightsContainer) {
                 fairyLightsContainer.remove();
                 fairyLightsContainer = null;
             }
 
-            // Disable Magic Cursor
             magicCursorActive = false;
         }
     }
-
-    // Magic Cursor effect
     document.addEventListener('mousemove', (e) => {
         if (!magicCursorActive) return;
-
-        // Spawn a trail dot occasionally to save performance
         if (Math.random() > 0.4) {
             const trail = document.createElement('div');
             trail.className = 'magic-trail';
@@ -526,5 +512,48 @@ function initChristmasTheme() {
             toggleWinterWonderland(false);
         }
     });
+}
+
+async function initViewCounter() {
+    const isOwner = localStorage.getItem('isOwner') === 'true';
+    const counterKey = 'denscape_portfolio';
+    const apiUrl = `https://countapi.mileshilliard.com/api/v1/${isOwner ? 'get' : 'hit'}/${counterKey}`;
+
+    try {
+        const res = await fetch(apiUrl);
+        if (!res.ok) return;
+        const data = await res.json();
+
+        const badge = document.getElementById('view-counter-badge');
+        const textElem = document.getElementById('view-counter-text');
+        if (badge && textElem) {
+            textElem.innerText = data.value.toLocaleString() + ' Views';
+            badge.style.display = 'flex';
+            badge.style.alignItems = 'center';
+            badge.style.gap = '0.4rem';
+            badge.style.background = 'rgba(255, 255, 255, 0.05)';
+            badge.style.padding = '0.2rem 0.6rem';
+            badge.style.borderRadius = '4px';
+            badge.style.border = '1px solid var(--line)';
+            if (isOwner) {
+                badge.title = 'Owner Mode (Not counting new views)';
+            }
+            let clicks = 0;
+            badge.addEventListener('click', () => {
+                clicks++;
+                if (clicks === 5) {
+                    const nowOwner = !isOwner;
+                    localStorage.setItem('isOwner', nowOwner);
+                    if (typeof showToast === 'function') {
+                        showToast(nowOwner ? 'Owner Mode Enabled (Views not counted)' : 'Owner Mode Disabled');
+                    }
+                    clicks = 0;
+                    setTimeout(() => location.reload(), 1500);
+                }
+            });
+        }
+    } catch (err) {
+        console.warn('Could not load view counter:', err);
+    }
 }
 
