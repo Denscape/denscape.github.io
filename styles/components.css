@@ -84,7 +84,7 @@
 }
 
 .hero-cta .btn {
-    min-width: 9rem;
+    /* Responsive width handled by Bootstrap grid */
 }
 
 .profile-panel {

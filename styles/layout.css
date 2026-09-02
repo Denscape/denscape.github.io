@@ -53,10 +53,14 @@ main,
 }
 
 .pro-toggler {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    height: 36px;
     color: #ffffff;
     border: 1px solid var(--line);
     border-radius: 0.5rem;
-    padding: 0.4rem 0.65rem;
+    padding: 0 0.65rem;
     background: rgba(255, 255, 255, 0.04);
 }
 
@@ -86,6 +90,8 @@ main,
 .btn-terminal-nav {
     display: inline-flex;
     align-items: center;
+    justify-content: center;
+    height: 36px;
     gap: 0.45rem;
     background: rgba(255, 255, 255, 0.05);
     color: #ffffff;
@@ -93,7 +99,7 @@ main,
     font-family: var(--font-mono);
     font-size: 0.82rem;
     font-weight: 600;
-    padding: 0.4rem 0.85rem;
+    padding: 0 0.85rem;
     border-radius: 0.5rem;
     transition: all 0.2s ease;
     cursor: pointer;
