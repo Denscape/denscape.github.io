@@ -293,6 +293,7 @@ Goal: Engineering robust, secure, and intuitive digital experiences.`,
         certs: `- Power BI for Beginners (Simplilearn / Microsoft)
 - Data Analytics Fundamentals (DataSense)
 - EduCTF 2026 COMSOC Hacking Competition (6th Place)
+- Trend University CTF Preliminary Round (Trend Micro / TrendLabs)
 - Cisco Networking Basics (Cisco Networking Academy & DICT-ITU)`,
 
         contact: `Email:    dnmrrdnd@gmail.com
